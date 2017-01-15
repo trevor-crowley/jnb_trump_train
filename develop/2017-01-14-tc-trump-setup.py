@@ -23,7 +23,8 @@ import seaborn as sns
 sns.set() # matplotlib defaults
 
 # Any tweaks that normally go in .matplotlibrc, etc., should explicitly go here
-plt.rcParams['figure.figsize'] = (12, 12)
+plt.rcParams['figure.figsize'] = (12, 8)
+get_ipython().magic("config InlineBackend.figure_format='retina'")
 
 
 # In[14]:
@@ -49,9 +50,38 @@ donate['contb_receipt_amt'] = pd.to_numeric(donate['contb_receipt_amt'])
 donate.dtypes
 
 
-# In[42]:
+# ## Review Data
 
-donate['contb_receipt_dt'].
+# In[43]:
+
+import qgrid # Best practices is to put imports at the top of the Notebook.
+qgrid.nbinstall(overwrite=True)
+
+
+# In[46]:
+
+donate.head()
+
+
+# In[45]:
+
+qgrid.show_grid(donate.head(), remote_js=True)
+
+
+# In[58]:
+
+donate.groupby('cand_nm').mean()
+
+
+# In[56]:
+
+sns.stripplot(x="cand_nm", y="contb_receipt_amt", data=donate[10000:20000]);
+
+
+# In[ ]:
+
+#x = np.random.normal(size=100)
+sns.distplot(donate['contb_receipt_amt'], bins=20, kde=False, rug=True);
 
 
 # In[ ]:
