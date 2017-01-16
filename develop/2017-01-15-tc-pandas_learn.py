@@ -26,21 +26,22 @@ fig_prefix = "../figures/2017-01-15-tc-"
 
 # ## Series test
 
-# In[19]:
+# In[23]:
 
 s = Series(np.random.randn(100))
-s[:20] =1
+#s[:20] =1
 
 
-# In[20]:
+# In[24]:
 
 plt.hist(s);
 plt.savefig(fig_prefix + "histogram.png")
 
 
-# In[21]:
+# In[25]:
 
 sns.distplot(s);
+plt.savefig(fig_prefix + "histogram_sns.png")
 
 
 # In[ ]:
