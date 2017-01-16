@@ -18,7 +18,7 @@ sns.set()
 plt.rcParams['figure.figsize']=(12,8)
 
 
-# In[ ]:
+# In[9]:
 
 # Find the notebook the saved figures came from
 fig_prefix = "../figures/2017-01-15-tc-"
@@ -26,15 +26,16 @@ fig_prefix = "../figures/2017-01-15-tc-"
 
 # ## Series test
 
-# In[5]:
+# In[10]:
 
 s = Series(np.random.randn(100))
 # s[:20] =1
 
 
-# In[7]:
+# In[11]:
 
 plt.hist(s);
+plt.savefig(fig_prefix + "histogram.png")
 
 
 # In[88]:
