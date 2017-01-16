@@ -1,0 +1,4083 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_c5da7d7d19c948bca9dc703c7506b7a2 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_c5da7d7d19c948bca9dc703c7506b7a2" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_c5da7d7d19c948bca9dc703c7506b7a2 = L.map('map_c5da7d7d19c948bca9dc703c7506b7a2', {
+                                           center:[48,-102],
+                                           zoom: 3,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_334a9405bc534b0fb723989ff4e0691c = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+
+        
+        
+            
+
+            var circle_marker_544b1b8956ce4f768464e45ee3a9c770 = L.circle(
+                [33.9833336,-116.3119965],
+                27400.000000000004,
+                {
+                    color: '#fdd8a6',
+                    fillColor: '#fdd8a6',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_947c1ced0e80447aac2f37999f59b7e5 = L.popup({maxWidth: '300'});
+
+            
+                var html_208d40f69d1543389e2b0810c83dbe85 = $('         <div id="html_208d40f69d1543389e2b0810c83dbe85"                 style="width: 100.0%; height: 100.0%;">                 17km S of Joshua Tree, CA</div>                 ')[0];
+                popup_947c1ced0e80447aac2f37999f59b7e5.setContent(html_208d40f69d1543389e2b0810c83dbe85);
+            
+
+            circle_marker_544b1b8956ce4f768464e45ee3a9c770.bindPopup(popup_947c1ced0e80447aac2f37999f59b7e5);
+
+            
+        
+        
+            
+
+            var circle_marker_ec86a5efc21e45148ef9c0c94d4d4a52 = L.circle(
+                [33.5045,-116.52766670000001],
+                6200.0,
+                {
+                    color: '#feefda',
+                    fillColor: '#feefda',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_3153e1398e664caebfd3dd569b7b7f0c = L.popup({maxWidth: '300'});
+
+            
+                var html_6a7e0de4ad5e4337a627beef7d01a5b4 = $('         <div id="html_6a7e0de4ad5e4337a627beef7d01a5b4"                 style="width: 100.0%; height: 100.0%;">                 15km ESE of Anza, CA</div>                 ')[0];
+                popup_3153e1398e664caebfd3dd569b7b7f0c.setContent(html_6a7e0de4ad5e4337a627beef7d01a5b4);
+            
+
+            circle_marker_ec86a5efc21e45148ef9c0c94d4d4a52.bindPopup(popup_3153e1398e664caebfd3dd569b7b7f0c);
+
+            
+        
+        
+            
+
+            var circle_marker_daa613a5cf274b829b764e46924b7325 = L.circle(
+                [61.3578,-147.9051],
+                30000.0,
+                {
+                    color: '#fdd49e',
+                    fillColor: '#fdd49e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_efe46d963826449e96ffbf083af6d667 = L.popup({maxWidth: '300'});
+
+            
+                var html_a887e6c91c9548d3b8a3d1dfd2df5dba = $('         <div id="html_a887e6c91c9548d3b8a3d1dfd2df5dba"                 style="width: 100.0%; height: 100.0%;">                 62km ESE of Lazy Mountain, Alaska</div>                 ')[0];
+                popup_efe46d963826449e96ffbf083af6d667.setContent(html_a887e6c91c9548d3b8a3d1dfd2df5dba);
+            
+
+            circle_marker_daa613a5cf274b829b764e46924b7325.bindPopup(popup_efe46d963826449e96ffbf083af6d667);
+
+            
+        
+        
+            
+
+            var circle_marker_4fb92a3e208042db91f4e469d0f089ca = L.circle(
+                [33.4885,-116.78],
+                20600.0,
+                {
+                    color: '#fee0b7',
+                    fillColor: '#fee0b7',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_a6c5a5fa02344d049e0abf0a5283725f = L.popup({maxWidth: '300'});
+
+            
+                var html_7d14dbdb4c4c4df1aefd4aeff1bc538f = $('         <div id="html_7d14dbdb4c4c4df1aefd4aeff1bc538f"                 style="width: 100.0%; height: 100.0%;">                 9km ENE of Aguanga, CA</div>                 ')[0];
+                popup_a6c5a5fa02344d049e0abf0a5283725f.setContent(html_7d14dbdb4c4c4df1aefd4aeff1bc538f);
+            
+
+            circle_marker_4fb92a3e208042db91f4e469d0f089ca.bindPopup(popup_a6c5a5fa02344d049e0abf0a5283725f);
+
+            
+        
+        
+            
+
+            var circle_marker_fcfe32f843ed4df6be4608333c830eb7 = L.circle(
+                [47.2225,-122.4735],
+                51200.0,
+                {
+                    color: '#fdac76',
+                    fillColor: '#fdac76',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_a54c0aee13f34aecb77cf50ba50e2d14 = L.popup({maxWidth: '300'});
+
+            
+                var html_60b4d26c12004540b33ecfc0dee2f9a6 = $('         <div id="html_60b4d26c12004540b33ecfc0dee2f9a6"                 style="width: 100.0%; height: 100.0%;">                 3km ESE of Fircrest, Washington</div>                 ')[0];
+                popup_a54c0aee13f34aecb77cf50ba50e2d14.setContent(html_60b4d26c12004540b33ecfc0dee2f9a6);
+            
+
+            circle_marker_fcfe32f843ed4df6be4608333c830eb7.bindPopup(popup_a54c0aee13f34aecb77cf50ba50e2d14);
+
+            
+        
+        
+            
+
+            var circle_marker_99547dfd4a81485388c4adcd4d16e948 = L.circle(
+                [19.3910007,-155.27749630000002],
+                46000.0,
+                {
+                    color: '#fdba83',
+                    fillColor: '#fdba83',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_75c7a57cdf1e4ecc9f0d230d8979cbc3 = L.popup({maxWidth: '300'});
+
+            
+                var html_1a4c7732f67e4480840567280246c097 = $('         <div id="html_1a4c7732f67e4480840567280246c097"                 style="width: 100.0%; height: 100.0%;">                 6km SW of Volcano, Hawaii</div>                 ')[0];
+                popup_75c7a57cdf1e4ecc9f0d230d8979cbc3.setContent(html_1a4c7732f67e4480840567280246c097);
+            
+
+            circle_marker_99547dfd4a81485388c4adcd4d16e948.bindPopup(popup_75c7a57cdf1e4ecc9f0d230d8979cbc3);
+
+            
+        
+        
+            
+
+            var circle_marker_257d45bdc3354f5ab688aaa471439dd0 = L.circle(
+                [33.9906667,-116.73616670000001],
+                18600.0,
+                {
+                    color: '#fee2bc',
+                    fillColor: '#fee2bc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_2a1dec94a7d4453ca4d1947f27153a40 = L.popup({maxWidth: '300'});
+
+            
+                var html_7c1182045f9e48079a7461a23734b805 = $('         <div id="html_7c1182045f9e48079a7461a23734b805"                 style="width: 100.0%; height: 100.0%;">                 9km NNE of Cabazon, CA</div>                 ')[0];
+                popup_2a1dec94a7d4453ca4d1947f27153a40.setContent(html_7c1182045f9e48079a7461a23734b805);
+            
+
+            circle_marker_257d45bdc3354f5ab688aaa471439dd0.bindPopup(popup_2a1dec94a7d4453ca4d1947f27153a40);
+
+            
+        
+        
+            
+
+            var circle_marker_dc631977f5d948f5b2dfdcc05bf00e69 = L.circle(
+                [61.1433,-140.0308],
+                32000.0,
+                {
+                    color: '#fdd19b',
+                    fillColor: '#fdd19b',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_f652b681962647039a499b94152c1eb6 = L.popup({maxWidth: '300'});
+
+            
+                var html_e0a20f5aa4884c3592cf20484b84242a = $('         <div id="html_e0a20f5aa4884c3592cf20484b84242a"                 style="width: 100.0%; height: 100.0%;">                 143km WNW of Haines Junction, Canada</div>                 ')[0];
+                popup_f652b681962647039a499b94152c1eb6.setContent(html_e0a20f5aa4884c3592cf20484b84242a);
+            
+
+            circle_marker_dc631977f5d948f5b2dfdcc05bf00e69.bindPopup(popup_f652b681962647039a499b94152c1eb6);
+
+            
+        
+        
+            
+
+            var circle_marker_695d25d4f15446d2a8da40bbda8802d9 = L.circle(
+                [64.6728,-149.0937],
+                18000.0,
+                {
+                    color: '#fee3bd',
+                    fillColor: '#fee3bd',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_5fd0707360e143f580b537824ee1725f = L.popup({maxWidth: '300'});
+
+            
+                var html_4b7c0b9a4cb84a60b906ee7f0f667164 = $('         <div id="html_4b7c0b9a4cb84a60b906ee7f0f667164"                 style="width: 100.0%; height: 100.0%;">                 10km N of North Nenana, Alaska</div>                 ')[0];
+                popup_5fd0707360e143f580b537824ee1725f.setContent(html_4b7c0b9a4cb84a60b906ee7f0f667164);
+            
+
+            circle_marker_695d25d4f15446d2a8da40bbda8802d9.bindPopup(popup_5fd0707360e143f580b537824ee1725f);
+
+            
+        
+        
+            
+
+            var circle_marker_5f596f7ec7bf4e05a6e1656fc064894c = L.circle(
+                [58.4186,-155.7201],
+                50000.0,
+                {
+                    color: '#fdaf79',
+                    fillColor: '#fdaf79',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_ebef8a21614945699d507861342d6016 = L.popup({maxWidth: '300'});
+
+            
+                var html_dcae42bd50fc4b49a225dd4059c5a3da = $('         <div id="html_dcae42bd50fc4b49a225dd4059c5a3da"                 style="width: 100.0%; height: 100.0%;">                 62km ESE of King Salmon, Alaska</div>                 ')[0];
+                popup_ebef8a21614945699d507861342d6016.setContent(html_dcae42bd50fc4b49a225dd4059c5a3da);
+            
+
+            circle_marker_5f596f7ec7bf4e05a6e1656fc064894c.bindPopup(popup_ebef8a21614945699d507861342d6016);
+
+            
+        
+        
+            
+
+            var circle_marker_40eca51d2cf34ea38b81b5608c4ccc7d = L.circle(
+                [19.375,-155.230835],
+                50000.0,
+                {
+                    color: '#fdaf79',
+                    fillColor: '#fdaf79',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_e56f38686b694285b12e46ab569c8a11 = L.popup({maxWidth: '300'});
+
+            
+                var html_f16c85e5fdb7401db9df26cd21d1177d = $('         <div id="html_f16c85e5fdb7401db9df26cd21d1177d"                 style="width: 100.0%; height: 100.0%;">                 6km S of Volcano, Hawaii</div>                 ')[0];
+                popup_e56f38686b694285b12e46ab569c8a11.setContent(html_f16c85e5fdb7401db9df26cd21d1177d);
+            
+
+            circle_marker_40eca51d2cf34ea38b81b5608c4ccc7d.bindPopup(popup_e56f38686b694285b12e46ab569c8a11);
+
+            
+        
+        
+            
+
+            var circle_marker_b0024030c2ea4bc4ab4c2ced520b5dec = L.circle(
+                [38.8264999,-122.80766299999999],
+                37000.0,
+                {
+                    color: '#fdc992',
+                    fillColor: '#fdc992',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_ad79698c93244ec8a3f397b4bc71d40a = L.popup({maxWidth: '300'});
+
+            
+                var html_49562caed2b5483bae106d5c06cff897 = $('         <div id="html_49562caed2b5483bae106d5c06cff897"                 style="width: 100.0%; height: 100.0%;">                 7km W of Cobb, California</div>                 ')[0];
+                popup_ad79698c93244ec8a3f397b4bc71d40a.setContent(html_49562caed2b5483bae106d5c06cff897);
+            
+
+            circle_marker_b0024030c2ea4bc4ab4c2ced520b5dec.bindPopup(popup_ad79698c93244ec8a3f397b4bc71d40a);
+
+            
+        
+        
+            
+
+            var circle_marker_399401121d59465985b4d155f855a0c0 = L.circle(
+                [36.53,-116.3097],
+                38000.0,
+                {
+                    color: '#fdc791',
+                    fillColor: '#fdc791',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_0a396a2872e1451ea13312b7eda254d8 = L.popup({maxWidth: '300'});
+
+            
+                var html_4408e65bc38747caa630ea342f58e45b = $('         <div id="html_4408e65bc38747caa630ea342f58e45b"                 style="width: 100.0%; height: 100.0%;">                 46km NW of Pahrump, Nevada</div>                 ')[0];
+                popup_0a396a2872e1451ea13312b7eda254d8.setContent(html_4408e65bc38747caa630ea342f58e45b);
+            
+
+            circle_marker_399401121d59465985b4d155f855a0c0.bindPopup(popup_0a396a2872e1451ea13312b7eda254d8);
+
+            
+        
+        
+            
+
+            var circle_marker_344f4df89fdf467a8abf97206c125dc8 = L.circle(
+                [38.816333799999995,-122.8099976],
+                24000.0,
+                {
+                    color: '#fddbad',
+                    fillColor: '#fddbad',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_03e8c278fd04413db2b7f997cc5749fb = L.popup({maxWidth: '300'});
+
+            
+                var html_f6d6cdcb02ac45bea2081ee7f0b35536 = $('         <div id="html_f6d6cdcb02ac45bea2081ee7f0b35536"                 style="width: 100.0%; height: 100.0%;">                 6km NW of The Geysers, California</div>                 ')[0];
+                popup_03e8c278fd04413db2b7f997cc5749fb.setContent(html_f6d6cdcb02ac45bea2081ee7f0b35536);
+            
+
+            circle_marker_344f4df89fdf467a8abf97206c125dc8.bindPopup(popup_03e8c278fd04413db2b7f997cc5749fb);
+
+            
+        
+        
+            
+
+            var circle_marker_1b3f9ee871c0421894e07af3d5e507c4 = L.circle(
+                [33.759666700000004,-116.04066670000002],
+                17400.0,
+                {
+                    color: '#fee4c0',
+                    fillColor: '#fee4c0',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_962ed8a11612429e804e886a3ec0346e = L.popup({maxWidth: '300'});
+
+            
+                var html_8a02fc656a1f44d5b763cc14f9ddd63b = $('         <div id="html_8a02fc656a1f44d5b763cc14f9ddd63b"                 style="width: 100.0%; height: 100.0%;">                 15km NE of Coachella, CA</div>                 ')[0];
+                popup_962ed8a11612429e804e886a3ec0346e.setContent(html_8a02fc656a1f44d5b763cc14f9ddd63b);
+            
+
+            circle_marker_1b3f9ee871c0421894e07af3d5e507c4.bindPopup(popup_962ed8a11612429e804e886a3ec0346e);
+
+            
+        
+        
+            
+
+            var circle_marker_cd6f0921f97d46b8a385d9558658135d = L.circle(
+                [19.1758,-64.482],
+                62000.0,
+                {
+                    color: '#fc8c59',
+                    fillColor: '#fc8c59',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_7f40915026134f748ec68c8ca9fbd9cd = L.popup({maxWidth: '300'});
+
+            
+                var html_e8cb286674804f86839a2c093b8d952b = $('         <div id="html_e8cb286674804f86839a2c093b8d952b"                 style="width: 100.0%; height: 100.0%;">                 85km N of Road Town, British Virgin Islands</div>                 ')[0];
+                popup_7f40915026134f748ec68c8ca9fbd9cd.setContent(html_e8cb286674804f86839a2c093b8d952b);
+            
+
+            circle_marker_cd6f0921f97d46b8a385d9558658135d.bindPopup(popup_7f40915026134f748ec68c8ca9fbd9cd);
+
+            
+        
+        
+            
+
+            var circle_marker_883ccbe6f137425cabfe27d865febca8 = L.circle(
+                [65.2646,-146.9278],
+                20000.0,
+                {
+                    color: '#fee0b8',
+                    fillColor: '#fee0b8',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_f71a66b6452f4dde800bb48629ab2897 = L.popup({maxWidth: '300'});
+
+            
+                var html_ac4ca0b14112483fb49effc46a949aa6 = $('         <div id="html_ac4ca0b14112483fb49effc46a949aa6"                 style="width: 100.0%; height: 100.0%;">                 59km NNE of Badger, Alaska</div>                 ')[0];
+                popup_f71a66b6452f4dde800bb48629ab2897.setContent(html_ac4ca0b14112483fb49effc46a949aa6);
+            
+
+            circle_marker_883ccbe6f137425cabfe27d865febca8.bindPopup(popup_f71a66b6452f4dde800bb48629ab2897);
+
+            
+        
+        
+            
+
+            var circle_marker_6bbf6680a5ec4a42a12e6634b8f83d9d = L.circle(
+                [33.631666700000004,-116.73466670000002],
+                12600.0,
+                {
+                    color: '#fee9cb',
+                    fillColor: '#fee9cb',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_c48c97eb6b7240e3a7e14c614f8c97dd = L.popup({maxWidth: '300'});
+
+            
+                var html_2bc65bade9e34fd5a5be29cea4ca7907 = $('         <div id="html_2bc65bade9e34fd5a5be29cea4ca7907"                 style="width: 100.0%; height: 100.0%;">                 10km NNW of Anza, CA</div>                 ')[0];
+                popup_c48c97eb6b7240e3a7e14c614f8c97dd.setContent(html_2bc65bade9e34fd5a5be29cea4ca7907);
+            
+
+            circle_marker_6bbf6680a5ec4a42a12e6634b8f83d9d.bindPopup(popup_c48c97eb6b7240e3a7e14c614f8c97dd);
+
+            
+        
+        
+            
+
+            var circle_marker_37375d2d6b5248a2bea5005f614e415a = L.circle(
+                [32.723,-115.98366670000001],
+                30800.0,
+                {
+                    color: '#fdd39d',
+                    fillColor: '#fdd39d',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_62d9146b0c1c406f9e06a6fef4355168 = L.popup({maxWidth: '300'});
+
+            
+                var html_96084908416246f18396e036e9310d22 = $('         <div id="html_96084908416246f18396e036e9310d22"                 style="width: 100.0%; height: 100.0%;">                 2km SE of Ocotillo, CA</div>                 ')[0];
+                popup_62d9146b0c1c406f9e06a6fef4355168.setContent(html_96084908416246f18396e036e9310d22);
+            
+
+            circle_marker_37375d2d6b5248a2bea5005f614e415a.bindPopup(popup_62d9146b0c1c406f9e06a6fef4355168);
+
+            
+        
+        
+            
+
+            var circle_marker_35610c79fdb646bdb2fe6a067934ca29 = L.circle(
+                [33.9776667,-116.30766670000001],
+                34000.0,
+                {
+                    color: '#fdce97',
+                    fillColor: '#fdce97',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_d5b8d505226e48fab11bbe4e3a1ff241 = L.popup({maxWidth: '300'});
+
+            
+                var html_bb0dc2487ace41eb9ad92a191ad0b1f3 = $('         <div id="html_bb0dc2487ace41eb9ad92a191ad0b1f3"                 style="width: 100.0%; height: 100.0%;">                 18km S of Joshua Tree, CA</div>                 ')[0];
+                popup_d5b8d505226e48fab11bbe4e3a1ff241.setContent(html_bb0dc2487ace41eb9ad92a191ad0b1f3);
+            
+
+            circle_marker_35610c79fdb646bdb2fe6a067934ca29.bindPopup(popup_d5b8d505226e48fab11bbe4e3a1ff241);
+
+            
+        
+        
+            
+
+            var circle_marker_2d65dc17ad1b46d2ba58c7ceeca189e6 = L.circle(
+                [32.7285,-115.98466670000002],
+                27000.0,
+                {
+                    color: '#fdd8a6',
+                    fillColor: '#fdd8a6',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_eb9fabd8c47f44288d63a4c1b0a489e5 = L.popup({maxWidth: '300'});
+
+            
+                var html_a0426884142c4bfdbf966ae056ee7d36 = $('         <div id="html_a0426884142c4bfdbf966ae056ee7d36"                 style="width: 100.0%; height: 100.0%;">                 1km SE of Ocotillo, CA</div>                 ')[0];
+                popup_eb9fabd8c47f44288d63a4c1b0a489e5.setContent(html_a0426884142c4bfdbf966ae056ee7d36);
+            
+
+            circle_marker_2d65dc17ad1b46d2ba58c7ceeca189e6.bindPopup(popup_eb9fabd8c47f44288d63a4c1b0a489e5);
+
+            
+        
+        
+            
+
+            var circle_marker_5f6654dc0ac446d38bb80da30080b912 = L.circle(
+                [33.7588333,-116.04083329999999],
+                20600.0,
+                {
+                    color: '#fee0b7',
+                    fillColor: '#fee0b7',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_eedd7bc6b2ad44da8578c098e4a6bc31 = L.popup({maxWidth: '300'});
+
+            
+                var html_dffd4dca4dd84f4a95eace524e5d9202 = $('         <div id="html_dffd4dca4dd84f4a95eace524e5d9202"                 style="width: 100.0%; height: 100.0%;">                 15km NE of Coachella, CA</div>                 ')[0];
+                popup_eedd7bc6b2ad44da8578c098e4a6bc31.setContent(html_dffd4dca4dd84f4a95eace524e5d9202);
+            
+
+            circle_marker_5f6654dc0ac446d38bb80da30080b912.bindPopup(popup_eedd7bc6b2ad44da8578c098e4a6bc31);
+
+            
+        
+        
+            
+
+            var circle_marker_406e6584b01949afa823d14523fa8041 = L.circle(
+                [33.5121667,-116.4551667],
+                24000.0,
+                {
+                    color: '#fddbad',
+                    fillColor: '#fddbad',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_df643c3eb15e49d9bacf100c47513ad9 = L.popup({maxWidth: '300'});
+
+            
+                var html_664ceb9df6e342d49d480fac0f0ce1c4 = $('         <div id="html_664ceb9df6e342d49d480fac0f0ce1c4"                 style="width: 100.0%; height: 100.0%;">                 21km ESE of Anza, CA</div>                 ')[0];
+                popup_df643c3eb15e49d9bacf100c47513ad9.setContent(html_664ceb9df6e342d49d480fac0f0ce1c4);
+            
+
+            circle_marker_406e6584b01949afa823d14523fa8041.bindPopup(popup_df643c3eb15e49d9bacf100c47513ad9);
+
+            
+        
+        
+            
+
+            var circle_marker_94857576c0794520b7537ab6c70d06b1 = L.circle(
+                [35.9673333,-117.9055],
+                29200.0,
+                {
+                    color: '#fdd5a0',
+                    fillColor: '#fdd5a0',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_f740bd6826d842ed8efb8ce83314e2aa = L.popup({maxWidth: '300'});
+
+            
+                var html_a3ddbc06be5f49dab8a5729d9ccd5065 = $('         <div id="html_a3ddbc06be5f49dab8a5729d9ccd5065"                 style="width: 100.0%; height: 100.0%;">                 3km N of Little Lake, CA</div>                 ')[0];
+                popup_f740bd6826d842ed8efb8ce83314e2aa.setContent(html_a3ddbc06be5f49dab8a5729d9ccd5065);
+            
+
+            circle_marker_94857576c0794520b7537ab6c70d06b1.bindPopup(popup_f740bd6826d842ed8efb8ce83314e2aa);
+
+            
+        
+        
+            
+
+            var circle_marker_3a14da5d2bb84032bafc16a2db9d2c6f = L.circle(
+                [60.9884,-152.0709],
+                34000.0,
+                {
+                    color: '#fdce97',
+                    fillColor: '#fdce97',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_02c2b2c31d54432c95eb54d491215dfd = L.popup({maxWidth: '300'});
+
+            
+                var html_f4a1f5910bc94426ba13f5539b8fb1f3 = $('         <div id="html_f4a1f5910bc94426ba13f5539b8fb1f3"                 style="width: 100.0%; height: 100.0%;">                 53km NW of Nikiski, Alaska</div>                 ')[0];
+                popup_02c2b2c31d54432c95eb54d491215dfd.setContent(html_f4a1f5910bc94426ba13f5539b8fb1f3);
+            
+
+            circle_marker_3a14da5d2bb84032bafc16a2db9d2c6f.bindPopup(popup_02c2b2c31d54432c95eb54d491215dfd);
+
+            
+        
+        
+            
+
+            var circle_marker_96a612b3a52b4441929bb8b9a968300c = L.circle(
+                [18.9941,-64.9319],
+                56000.0,
+                {
+                    color: '#fc9e69',
+                    fillColor: '#fc9e69',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_76911dfd663b4aeebc3aa8ad29043603 = L.popup({maxWidth: '300'});
+
+            
+                var html_434faa2ffbe242b0a64e8b1a8c69e0bc = $('         <div id="html_434faa2ffbe242b0a64e8b1a8c69e0bc"                 style="width: 100.0%; height: 100.0%;">                 72km N of Charlotte Amalie, U.S. Virgin Islands</div>                 ')[0];
+                popup_76911dfd663b4aeebc3aa8ad29043603.setContent(html_434faa2ffbe242b0a64e8b1a8c69e0bc);
+            
+
+            circle_marker_96a612b3a52b4441929bb8b9a968300c.bindPopup(popup_76911dfd663b4aeebc3aa8ad29043603);
+
+            
+        
+        
+            
+
+            var circle_marker_80c0870adea1404f8751bf080e18eeb5 = L.circle(
+                [61.1698,-149.111],
+                32000.0,
+                {
+                    color: '#fdd19b',
+                    fillColor: '#fdd19b',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_890119830a4e4ddc92696b84b47f772c = L.popup({maxWidth: '300'});
+
+            
+                var html_1b3c163af7744560814d780cd4a7b798 = $('         <div id="html_1b3c163af7744560814d780cd4a7b798"                 style="width: 100.0%; height: 100.0%;">                 41km S of Butte, Alaska</div>                 ')[0];
+                popup_890119830a4e4ddc92696b84b47f772c.setContent(html_1b3c163af7744560814d780cd4a7b798);
+            
+
+            circle_marker_80c0870adea1404f8751bf080e18eeb5.bindPopup(popup_890119830a4e4ddc92696b84b47f772c);
+
+            
+        
+        
+            
+
+            var circle_marker_9518c444584347828c0461ac463eb136 = L.circle(
+                [61.6342,-149.7475],
+                32000.0,
+                {
+                    color: '#fdd19b',
+                    fillColor: '#fdd19b',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_da9ffa6f83544e9f8f56452cc82d1078 = L.popup({maxWidth: '300'});
+
+            
+                var html_d7dcce87785e43f19c188f934c8f3f72 = $('         <div id="html_d7dcce87785e43f19c188f934c8f3f72"                 style="width: 100.0%; height: 100.0%;">                 3km E of Houston, Alaska</div>                 ')[0];
+                popup_da9ffa6f83544e9f8f56452cc82d1078.setContent(html_d7dcce87785e43f19c188f934c8f3f72);
+            
+
+            circle_marker_9518c444584347828c0461ac463eb136.bindPopup(popup_da9ffa6f83544e9f8f56452cc82d1078);
+
+            
+        
+        
+            
+
+            var circle_marker_d5d3ed8e20114bd18e266b0c4ad1be97 = L.circle(
+                [63.1104,-144.3282],
+                32000.0,
+                {
+                    color: '#fdd19b',
+                    fillColor: '#fdd19b',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_51c4f473e82944eb9ef9436678bc3768 = L.popup({maxWidth: '300'});
+
+            
+                var html_87314946820344db8be8e17eebd81c4d = $('         <div id="html_87314946820344db8be8e17eebd81c4d"                 style="width: 100.0%; height: 100.0%;">                 72km WSW of Tok, Alaska</div>                 ')[0];
+                popup_51c4f473e82944eb9ef9436678bc3768.setContent(html_87314946820344db8be8e17eebd81c4d);
+            
+
+            circle_marker_d5d3ed8e20114bd18e266b0c4ad1be97.bindPopup(popup_51c4f473e82944eb9ef9436678bc3768);
+
+            
+        
+        
+            
+
+            var circle_marker_7f9aa8d25e1d4db48d45d3a4ceb7e307 = L.circle(
+                [33.482833299999996,-116.43416670000002],
+                16200.000000000002,
+                {
+                    color: '#fee5c3',
+                    fillColor: '#fee5c3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_ac05035b5e574ea88f69d85ab8705550 = L.popup({maxWidth: '300'});
+
+            
+                var html_e32752b27a4e4038b806bddb61da242b = $('         <div id="html_e32752b27a4e4038b806bddb61da242b"                 style="width: 100.0%; height: 100.0%;">                 23km SSW of La Quinta, CA</div>                 ')[0];
+                popup_ac05035b5e574ea88f69d85ab8705550.setContent(html_e32752b27a4e4038b806bddb61da242b);
+            
+
+            circle_marker_7f9aa8d25e1d4db48d45d3a4ceb7e307.bindPopup(popup_ac05035b5e574ea88f69d85ab8705550);
+
+            
+        
+        
+            
+
+            var circle_marker_ddaadc70b3f443d899cae3ea034e1c19 = L.circle(
+                [13.4537,124.1312],
+                96000.0,
+                {
+                    color: '#d2291a',
+                    fillColor: '#d2291a',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_b1aba3a27efc411fb40e94dd86ed3651 = L.popup({maxWidth: '300'});
+
+            
+                var html_74b36eb0879647b8a0317c0d3e1060f2 = $('         <div id="html_74b36eb0879647b8a0317c0d3e1060f2"                 style="width: 100.0%; height: 100.0%;">                 16km SSE of Calolbon, Philippines</div>                 ')[0];
+                popup_b1aba3a27efc411fb40e94dd86ed3651.setContent(html_74b36eb0879647b8a0317c0d3e1060f2);
+            
+
+            circle_marker_ddaadc70b3f443d899cae3ea034e1c19.bindPopup(popup_b1aba3a27efc411fb40e94dd86ed3651);
+
+            
+        
+        
+            
+
+            var circle_marker_1d2fef4d71d14f1f9972fda812ad7c67 = L.circle(
+                [38.8043327,-122.78583529999999],
+                9000.0,
+                {
+                    color: '#feedd3',
+                    fillColor: '#feedd3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_d34965d378af4ad194d6fce48d5db8db = L.popup({maxWidth: '300'});
+
+            
+                var html_05b331e82bd44649926f4ac350d3c222 = $('         <div id="html_05b331e82bd44649926f4ac350d3c222"                 style="width: 100.0%; height: 100.0%;">                 3km NW of The Geysers, California</div>                 ')[0];
+                popup_d34965d378af4ad194d6fce48d5db8db.setContent(html_05b331e82bd44649926f4ac350d3c222);
+            
+
+            circle_marker_1d2fef4d71d14f1f9972fda812ad7c67.bindPopup(popup_d34965d378af4ad194d6fce48d5db8db);
+
+            
+        
+        
+            
+
+            var circle_marker_6d9dbd7227f3456ab4deeb3d43ef50db = L.circle(
+                [38.500499700000006,-122.76816559999999],
+                48200.0,
+                {
+                    color: '#fdb57e',
+                    fillColor: '#fdb57e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_56f6850c3f2346318f9ee71c749c9688 = L.popup({maxWidth: '300'});
+
+            
+                var html_c79acb263aa9409b9bd0d3d88ee8c3df = $('         <div id="html_c79acb263aa9409b9bd0d3d88ee8c3df"                 style="width: 100.0%; height: 100.0%;">                 2km SW of Larkfield-Wikiup, California</div>                 ')[0];
+                popup_56f6850c3f2346318f9ee71c749c9688.setContent(html_c79acb263aa9409b9bd0d3d88ee8c3df);
+            
+
+            circle_marker_6d9dbd7227f3456ab4deeb3d43ef50db.bindPopup(popup_56f6850c3f2346318f9ee71c749c9688);
+
+            
+        
+        
+            
+
+            var circle_marker_3453d42f240f4d878cda75ea8ea0a7a2 = L.circle(
+                [38.8214989,-122.8046646],
+                15600.0,
+                {
+                    color: '#fee6c4',
+                    fillColor: '#fee6c4',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_3dfdd5e48f9d454da0adea2e1bf58a8c = L.popup({maxWidth: '300'});
+
+            
+                var html_b67f0d22655f41c9a19277f63f95241e = $('         <div id="html_b67f0d22655f41c9a19277f63f95241e"                 style="width: 100.0%; height: 100.0%;">                 6km NW of The Geysers, California</div>                 ')[0];
+                popup_3dfdd5e48f9d454da0adea2e1bf58a8c.setContent(html_b67f0d22655f41c9a19277f63f95241e);
+            
+
+            circle_marker_3453d42f240f4d878cda75ea8ea0a7a2.bindPopup(popup_3dfdd5e48f9d454da0adea2e1bf58a8c);
+
+            
+        
+        
+            
+
+            var circle_marker_d763f7850e56405ea5ac86f161bd2acc = L.circle(
+                [36.0486679,-120.6125031],
+                34000.0,
+                {
+                    color: '#fdce97',
+                    fillColor: '#fdce97',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_5b55ef3bc3dd41bc95ec9825e8bbc127 = L.popup({maxWidth: '300'});
+
+            
+                var html_cfa0e33d5f7d4b33a760f9586c30bfa9 = $('         <div id="html_cfa0e33d5f7d4b33a760f9586c30bfa9"                 style="width: 100.0%; height: 100.0%;">                 24km WSW of Coalinga, California</div>                 ')[0];
+                popup_5b55ef3bc3dd41bc95ec9825e8bbc127.setContent(html_cfa0e33d5f7d4b33a760f9586c30bfa9);
+            
+
+            circle_marker_d763f7850e56405ea5ac86f161bd2acc.bindPopup(popup_5b55ef3bc3dd41bc95ec9825e8bbc127);
+
+            
+        
+        
+            
+
+            var circle_marker_9257ebb8790640bcae619b60d37a8654 = L.circle(
+                [33.6636667,-116.76916670000001],
+                10600.0,
+                {
+                    color: '#feebd0',
+                    fillColor: '#feebd0',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_978cbd33335b4670927f65b3ed4705e8 = L.popup({maxWidth: '300'});
+
+            
+                var html_a94710a332ba49ba9ea90a9339c6d2aa = $('         <div id="html_a94710a332ba49ba9ea90a9339c6d2aa"                 style="width: 100.0%; height: 100.0%;">                 10km SSW of Idyllwild, CA</div>                 ')[0];
+                popup_978cbd33335b4670927f65b3ed4705e8.setContent(html_a94710a332ba49ba9ea90a9339c6d2aa);
+            
+
+            circle_marker_9257ebb8790640bcae619b60d37a8654.bindPopup(popup_978cbd33335b4670927f65b3ed4705e8);
+
+            
+        
+        
+            
+
+            var circle_marker_fb57927ce75d45449e2591fc6d50c2be = L.circle(
+                [19.1986675,-155.0910034],
+                46600.0,
+                {
+                    color: '#fdb982',
+                    fillColor: '#fdb982',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_7413e57a7969442fb626e8ac471b8504 = L.popup({maxWidth: '300'});
+
+            
+                var html_fc9ed3f623ca4eb5ad3d50d05df874a3 = $('         <div id="html_fc9ed3f623ca4eb5ad3d50d05df874a3"                 style="width: 100.0%; height: 100.0%;">                 29km SSE of Volcano, Hawaii</div>                 ')[0];
+                popup_7413e57a7969442fb626e8ac471b8504.setContent(html_fc9ed3f623ca4eb5ad3d50d05df874a3);
+            
+
+            circle_marker_fb57927ce75d45449e2591fc6d50c2be.bindPopup(popup_7413e57a7969442fb626e8ac471b8504);
+
+            
+        
+        
+            
+
+            var circle_marker_e61144d409df48de9484f672d9e9ae94 = L.circle(
+                [19.318832399999998,-155.22183230000002],
+                39600.0,
+                {
+                    color: '#fdc58e',
+                    fillColor: '#fdc58e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_4fa2d076c55d4726845ca1ebf942e554 = L.popup({maxWidth: '300'});
+
+            
+                var html_f44eab971c244b55a479bc6714bb60b8 = $('         <div id="html_f44eab971c244b55a479bc6714bb60b8"                 style="width: 100.0%; height: 100.0%;">                 12km S of Volcano, Hawaii</div>                 ')[0];
+                popup_4fa2d076c55d4726845ca1ebf942e554.setContent(html_f44eab971c244b55a479bc6714bb60b8);
+            
+
+            circle_marker_e61144d409df48de9484f672d9e9ae94.bindPopup(popup_4fa2d076c55d4726845ca1ebf942e554);
+
+            
+        
+        
+            
+
+            var circle_marker_cb74a3e4a2ff402f93ca02abf1437639 = L.circle(
+                [37.4104996,-118.52083590000002],
+                32800.0,
+                {
+                    color: '#fdd09a',
+                    fillColor: '#fdd09a',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_a2b4e2c78618422091b912de74f996d7 = L.popup({maxWidth: '300'});
+
+            
+                var html_95a4d99c757f476c9f0f13832be9bf55 = $('         <div id="html_95a4d99c757f476c9f0f13832be9bf55"                 style="width: 100.0%; height: 100.0%;">                 8km NW of West Bishop, California</div>                 ')[0];
+                popup_a2b4e2c78618422091b912de74f996d7.setContent(html_95a4d99c757f476c9f0f13832be9bf55);
+            
+
+            circle_marker_cb74a3e4a2ff402f93ca02abf1437639.bindPopup(popup_a2b4e2c78618422091b912de74f996d7);
+
+            
+        
+        
+            
+
+            var circle_marker_bd65813cdff046198921d35e5bb447dc = L.circle(
+                [66.7575,-147.5273],
+                58000.0,
+                {
+                    color: '#fc9863',
+                    fillColor: '#fc9863',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_fbd36fe3151e4d22945cff41599b3efe = L.popup({maxWidth: '300'});
+
+            
+                var html_17d4fcc7fd4943eab7c34821c0c9d074 = $('         <div id="html_17d4fcc7fd4943eab7c34821c0c9d074"                 style="width: 100.0%; height: 100.0%;">                 101km WNW of Fort Yukon, Alaska</div>                 ')[0];
+                popup_fbd36fe3151e4d22945cff41599b3efe.setContent(html_17d4fcc7fd4943eab7c34821c0c9d074);
+            
+
+            circle_marker_bd65813cdff046198921d35e5bb447dc.bindPopup(popup_fbd36fe3151e4d22945cff41599b3efe);
+
+            
+        
+        
+            
+
+            var circle_marker_0514ab67c8cf4fb18be9bdec92ff9796 = L.circle(
+                [38.8128319,-122.83116909999998],
+                30600.0,
+                {
+                    color: '#fdd39d',
+                    fillColor: '#fdd39d',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_d7f8b0f935e9413e8640f7609ab8ff38 = L.popup({maxWidth: '300'});
+
+            
+                var html_b4745a5c901d44c4966f2c1202eaf5d3 = $('         <div id="html_b4745a5c901d44c4966f2c1202eaf5d3"                 style="width: 100.0%; height: 100.0%;">                 7km WNW of The Geysers, California</div>                 ')[0];
+                popup_d7f8b0f935e9413e8640f7609ab8ff38.setContent(html_b4745a5c901d44c4966f2c1202eaf5d3);
+            
+
+            circle_marker_0514ab67c8cf4fb18be9bdec92ff9796.bindPopup(popup_d7f8b0f935e9413e8640f7609ab8ff38);
+
+            
+        
+        
+            
+
+            var circle_marker_44a042c9aa2b4cadb1ca1e210f04a602 = L.circle(
+                [33.246333299999996,-116.3956667],
+                20600.0,
+                {
+                    color: '#fee0b7',
+                    fillColor: '#fee0b7',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_b6a0513f5cac4aac80c937bd8f3c1be7 = L.popup({maxWidth: '300'});
+
+            
+                var html_7e4b954097fe4be796c97cf784db8a1a = $('         <div id="html_7e4b954097fe4be796c97cf784db8a1a"                 style="width: 100.0%; height: 100.0%;">                 2km WSW of Borrego Springs, CA</div>                 ')[0];
+                popup_b6a0513f5cac4aac80c937bd8f3c1be7.setContent(html_7e4b954097fe4be796c97cf784db8a1a);
+            
+
+            circle_marker_44a042c9aa2b4cadb1ca1e210f04a602.bindPopup(popup_b6a0513f5cac4aac80c937bd8f3c1be7);
+
+            
+        
+        
+            
+
+            var circle_marker_a1e1d6cab96941088c507e1bdf959226 = L.circle(
+                [61.3894,-151.4314],
+                28000.0,
+                {
+                    color: '#fdd6a3',
+                    fillColor: '#fdd6a3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_a51fc4c0668441018a0c604a809bc62b = L.popup({maxWidth: '300'});
+
+            
+                var html_e3ea30cdb98748b890a237131efaa328 = $('         <div id="html_e3ea30cdb98748b890a237131efaa328"                 style="width: 100.0%; height: 100.0%;">                 78km N of Nikiski, Alaska</div>                 ')[0];
+                popup_a51fc4c0668441018a0c604a809bc62b.setContent(html_e3ea30cdb98748b890a237131efaa328);
+            
+
+            circle_marker_a1e1d6cab96941088c507e1bdf959226.bindPopup(popup_a51fc4c0668441018a0c604a809bc62b);
+
+            
+        
+        
+            
+
+            var circle_marker_fbc0efdf7afc49e8afdb433e18750dbd = L.circle(
+                [38.8433342,-122.829834],
+                15400.0,
+                {
+                    color: '#fee7c5',
+                    fillColor: '#fee7c5',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_b7c1d27820324dec95b88b1a9b42d954 = L.popup({maxWidth: '300'});
+
+            
+                var html_fc50e2b2c23a490683faa17e564ab78e = $('         <div id="html_fc50e2b2c23a490683faa17e564ab78e"                 style="width: 100.0%; height: 100.0%;">                 9km WNW of Cobb, California</div>                 ')[0];
+                popup_b7c1d27820324dec95b88b1a9b42d954.setContent(html_fc50e2b2c23a490683faa17e564ab78e);
+            
+
+            circle_marker_fbc0efdf7afc49e8afdb433e18750dbd.bindPopup(popup_b7c1d27820324dec95b88b1a9b42d954);
+
+            
+        
+        
+            
+
+            var circle_marker_5191d9be1c1b4c11bf3445fadb68c16c = L.circle(
+                [36.4698334,-120.86233519999999],
+                38400.0,
+                {
+                    color: '#fdc791',
+                    fillColor: '#fdc791',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_9befcccd1b8e4e4eb95cc2d407d6950a = L.popup({maxWidth: '300'});
+
+            
+                var html_9ddfec277c604f6f897006dc34e9fa1e = $('         <div id="html_9ddfec277c604f6f897006dc34e9fa1e"                 style="width: 100.0%; height: 100.0%;">                 37km NE of King City, California</div>                 ')[0];
+                popup_9befcccd1b8e4e4eb95cc2d407d6950a.setContent(html_9ddfec277c604f6f897006dc34e9fa1e);
+            
+
+            circle_marker_5191d9be1c1b4c11bf3445fadb68c16c.bindPopup(popup_9befcccd1b8e4e4eb95cc2d407d6950a);
+
+            
+        
+        
+            
+
+            var circle_marker_cb6ef743c5204fc6b58ea0a1b82824f7 = L.circle(
+                [63.5599,-147.314],
+                26000.0,
+                {
+                    color: '#fdd9a8',
+                    fillColor: '#fdd9a8',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_6691872078c34c3f98c315d4aac85222 = L.popup({maxWidth: '300'});
+
+            
+                var html_1a402310b8ac4ee3b5f276923c1f2ee7 = $('         <div id="html_1a402310b8ac4ee3b5f276923c1f2ee7"                 style="width: 100.0%; height: 100.0%;">                 83km ENE of Cantwell, Alaska</div>                 ')[0];
+                popup_6691872078c34c3f98c315d4aac85222.setContent(html_1a402310b8ac4ee3b5f276923c1f2ee7);
+            
+
+            circle_marker_cb6ef743c5204fc6b58ea0a1b82824f7.bindPopup(popup_6691872078c34c3f98c315d4aac85222);
+
+            
+        
+        
+            
+
+            var circle_marker_6f66cb5b506c4669887256fd95548946 = L.circle(
+                [38.8250008,-122.85683440000001],
+                19600.0,
+                {
+                    color: '#fee1b9',
+                    fillColor: '#fee1b9',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_96e018a5a1174a2c857680dff6f41b36 = L.popup({maxWidth: '300'});
+
+            
+                var html_b29cfa9db3c54452ba5c6715417a10b2 = $('         <div id="html_b29cfa9db3c54452ba5c6715417a10b2"                 style="width: 100.0%; height: 100.0%;">                 10km WNW of The Geysers, California</div>                 ')[0];
+                popup_96e018a5a1174a2c857680dff6f41b36.setContent(html_b29cfa9db3c54452ba5c6715417a10b2);
+            
+
+            circle_marker_6f66cb5b506c4669887256fd95548946.bindPopup(popup_96e018a5a1174a2c857680dff6f41b36);
+
+            
+        
+        
+            
+
+            var circle_marker_4cad9fa69ab243b592a6a957cc3c1766 = L.circle(
+                [60.0798,-152.6855],
+                40000.0,
+                {
+                    color: '#fdc48d',
+                    fillColor: '#fdc48d',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_d8b59c9e815b4dbb813b22e482406d53 = L.popup({maxWidth: '300'});
+
+            
+                var html_730256b9bb7244a88fcf7099ee25d706 = $('         <div id="html_730256b9bb7244a88fcf7099ee25d706"                 style="width: 100.0%; height: 100.0%;">                 45km S of Redoubt Volcano, Alaska</div>                 ')[0];
+                popup_d8b59c9e815b4dbb813b22e482406d53.setContent(html_730256b9bb7244a88fcf7099ee25d706);
+            
+
+            circle_marker_4cad9fa69ab243b592a6a957cc3c1766.bindPopup(popup_d8b59c9e815b4dbb813b22e482406d53);
+
+            
+        
+        
+            
+
+            var circle_marker_e1a5a4b3523846cb968512f163a9cb80 = L.circle(
+                [-6.1542,154.4855],
+                100000.0,
+                {
+                    color: '#c91d13',
+                    fillColor: '#c91d13',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_ada0bbc49c934beab828540a162e1767 = L.popup({maxWidth: '300'});
+
+            
+                var html_39d29ffa2e6145d0b94f78448f6a5b40 = $('         <div id="html_39d29ffa2e6145d0b94f78448f6a5b40"                 style="width: 100.0%; height: 100.0%;">                 112km W of Panguna, Papua New Guinea</div>                 ')[0];
+                popup_ada0bbc49c934beab828540a162e1767.setContent(html_39d29ffa2e6145d0b94f78448f6a5b40);
+            
+
+            circle_marker_e1a5a4b3523846cb968512f163a9cb80.bindPopup(popup_ada0bbc49c934beab828540a162e1767);
+
+            
+        
+        
+            
+
+            var circle_marker_eda7bb27f05446e199ab6377044e72b8 = L.circle(
+                [0.5927,-80.009],
+                98000.0,
+                {
+                    color: '#cd2316',
+                    fillColor: '#cd2316',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_3ac7cbb7adb7444191c1724595226110 = L.popup({maxWidth: '300'});
+
+            
+                var html_c63e9d4a7b5e48b98b368c8242924dcc = $('         <div id="html_c63e9d4a7b5e48b98b368c8242924dcc"                 style="width: 100.0%; height: 100.0%;">                 2km ESE of Muisne, Ecuador</div>                 ')[0];
+                popup_3ac7cbb7adb7444191c1724595226110.setContent(html_c63e9d4a7b5e48b98b368c8242924dcc);
+            
+
+            circle_marker_eda7bb27f05446e199ab6377044e72b8.bindPopup(popup_3ac7cbb7adb7444191c1724595226110);
+
+            
+        
+        
+            
+
+            var circle_marker_236c10af835d44e284a76fdb737f8637 = L.circle(
+                [63.2749,-151.1062],
+                36000.0,
+                {
+                    color: '#fdca94',
+                    fillColor: '#fdca94',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_4b7530bd84394d7685d8bece05f416f6 = L.popup({maxWidth: '300'});
+
+            
+                var html_b2c4730a71004371bd4dc529801e4fe8 = $('         <div id="html_b2c4730a71004371bd4dc529801e4fe8"                 style="width: 100.0%; height: 100.0%;">                 108km W of Cantwell, Alaska</div>                 ')[0];
+                popup_4b7530bd84394d7685d8bece05f416f6.setContent(html_b2c4730a71004371bd4dc529801e4fe8);
+            
+
+            circle_marker_236c10af835d44e284a76fdb737f8637.bindPopup(popup_4b7530bd84394d7685d8bece05f416f6);
+
+            
+        
+        
+            
+
+            var circle_marker_c06111334ad5437a8969643b8c0c64ae = L.circle(
+                [37.41266629999999,-122.26616670000001],
+                33200.0,
+                {
+                    color: '#fdcf99',
+                    fillColor: '#fdcf99',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_8ed36e6ace1d4c47b1f3c04507cf2549 = L.popup({maxWidth: '300'});
+
+            
+                var html_38925f9f34ab4719a1f412d9cc59525d = $('         <div id="html_38925f9f34ab4719a1f412d9cc59525d"                 style="width: 100.0%; height: 100.0%;">                 2km SSW of Woodside, California</div>                 ')[0];
+                popup_8ed36e6ace1d4c47b1f3c04507cf2549.setContent(html_38925f9f34ab4719a1f412d9cc59525d);
+            
+
+            circle_marker_c06111334ad5437a8969643b8c0c64ae.bindPopup(popup_8ed36e6ace1d4c47b1f3c04507cf2549);
+
+            
+        
+        
+            
+
+            var circle_marker_b602ebd0da0c4ef6987e5807ea28d8ea = L.circle(
+                [37.8703346,-122.2480011],
+                38400.0,
+                {
+                    color: '#fdc791',
+                    fillColor: '#fdc791',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_31478043903e4fecb94ea04d836f5938 = L.popup({maxWidth: '300'});
+
+            
+                var html_858b0681a5a1451f83db35575c660d1e = $('         <div id="html_858b0681a5a1451f83db35575c660d1e"                 style="width: 100.0%; height: 100.0%;">                 2km E of Berkeley, California</div>                 ')[0];
+                popup_31478043903e4fecb94ea04d836f5938.setContent(html_858b0681a5a1451f83db35575c660d1e);
+            
+
+            circle_marker_b602ebd0da0c4ef6987e5807ea28d8ea.bindPopup(popup_31478043903e4fecb94ea04d836f5938);
+
+            
+        
+        
+            
+
+            var circle_marker_13420c6d89a74bb2a99ec7fa1d66a815 = L.circle(
+                [33.8778333,-116.76866670000001],
+                16800.0,
+                {
+                    color: '#fee5c1',
+                    fillColor: '#fee5c1',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_d95fa54ca05648f9aee2718f003733bb = L.popup({maxWidth: '300'});
+
+            
+                var html_718bbc6ef92b455891487b6582395640 = $('         <div id="html_718bbc6ef92b455891487b6582395640"                 style="width: 100.0%; height: 100.0%;">                 5km SSE of Cabazon, CA</div>                 ')[0];
+                popup_d95fa54ca05648f9aee2718f003733bb.setContent(html_718bbc6ef92b455891487b6582395640);
+            
+
+            circle_marker_13420c6d89a74bb2a99ec7fa1d66a815.bindPopup(popup_d95fa54ca05648f9aee2718f003733bb);
+
+            
+        
+        
+            
+
+            var circle_marker_51b20856562b483395242aeb66c252a0 = L.circle(
+                [61.3875,-152.14700000000002],
+                6000.0,
+                {
+                    color: '#feefda',
+                    fillColor: '#feefda',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_de646390a6544fcc916acc186e0e1535 = L.popup({maxWidth: '300'});
+
+            
+                var html_eab81ce0b5fb4554802b4b2670c3215e = $('         <div id="html_eab81ce0b5fb4554802b4b2670c3215e"                 style="width: 100.0%; height: 100.0%;">                 90km NNW of Nikiski, Alaska</div>                 ')[0];
+                popup_de646390a6544fcc916acc186e0e1535.setContent(html_eab81ce0b5fb4554802b4b2670c3215e);
+            
+
+            circle_marker_51b20856562b483395242aeb66c252a0.bindPopup(popup_de646390a6544fcc916acc186e0e1535);
+
+            
+        
+        
+            
+
+            var circle_marker_1d95987c04dd4543be061a27ec72276d = L.circle(
+                [61.3868,-152.2265],
+                48000.0,
+                {
+                    color: '#fdb57e',
+                    fillColor: '#fdb57e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_82f802bd1f7e4cd188c3e3c2a97e0e28 = L.popup({maxWidth: '300'});
+
+            
+                var html_c63b71653d2e4d779093d655dc5f9ecc = $('         <div id="html_c63b71653d2e4d779093d655dc5f9ecc"                 style="width: 100.0%; height: 100.0%;">                 92km NNW of Nikiski, Alaska</div>                 ')[0];
+                popup_82f802bd1f7e4cd188c3e3c2a97e0e28.setContent(html_c63b71653d2e4d779093d655dc5f9ecc);
+            
+
+            circle_marker_1d95987c04dd4543be061a27ec72276d.bindPopup(popup_82f802bd1f7e4cd188c3e3c2a97e0e28);
+
+            
+        
+        
+            
+
+            var circle_marker_0d7d41920fad4f49bed461f7d74a7256 = L.circle(
+                [58.5385,-153.6504],
+                48000.0,
+                {
+                    color: '#fdb57e',
+                    fillColor: '#fdb57e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_4e737428c0bb4f5bacfdea79ed073296 = L.popup({maxWidth: '300'});
+
+            
+                var html_751cc4fd678244e4ae3e4ed4a9b45e56 = $('         <div id="html_751cc4fd678244e4ae3e4ed4a9b45e56"                 style="width: 100.0%; height: 100.0%;">                 105km NW of Kodiak Station, Alaska</div>                 ')[0];
+                popup_4e737428c0bb4f5bacfdea79ed073296.setContent(html_751cc4fd678244e4ae3e4ed4a9b45e56);
+            
+
+            circle_marker_0d7d41920fad4f49bed461f7d74a7256.bindPopup(popup_4e737428c0bb4f5bacfdea79ed073296);
+
+            
+        
+        
+            
+
+            var circle_marker_0bd30c45abbb42aeb73a89c76781af31 = L.circle(
+                [59.5752,-151.3395],
+                10000.0,
+                {
+                    color: '#feecd1',
+                    fillColor: '#feecd1',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_fd8dea71bbee497989b7f849ca155d4c = L.popup({maxWidth: '300'});
+
+            
+                var html_68e78ad7b2b94a8297834135ae94231e = $('         <div id="html_68e78ad7b2b94a8297834135ae94231e"                 style="width: 100.0%; height: 100.0%;">                 13km ESE of Homer, Alaska</div>                 ')[0];
+                popup_fd8dea71bbee497989b7f849ca155d4c.setContent(html_68e78ad7b2b94a8297834135ae94231e);
+            
+
+            circle_marker_0bd30c45abbb42aeb73a89c76781af31.bindPopup(popup_fd8dea71bbee497989b7f849ca155d4c);
+
+            
+        
+        
+            
+
+            var circle_marker_1c6715f45ba24e48818b7d84dfc38245 = L.circle(
+                [62.9862,-149.5641],
+                12000.0,
+                {
+                    color: '#feeacc',
+                    fillColor: '#feeacc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_a5e7228ae62c4759921bce4d897eaf3f = L.popup({maxWidth: '300'});
+
+            
+                var html_67368d272fbc40388ce16b2ad28b6499 = $('         <div id="html_67368d272fbc40388ce16b2ad28b6499"                 style="width: 100.0%; height: 100.0%;">                 54km SW of Cantwell, Alaska</div>                 ')[0];
+                popup_a5e7228ae62c4759921bce4d897eaf3f.setContent(html_67368d272fbc40388ce16b2ad28b6499);
+            
+
+            circle_marker_1c6715f45ba24e48818b7d84dfc38245.bindPopup(popup_a5e7228ae62c4759921bce4d897eaf3f);
+
+            
+        
+        
+            
+
+            var circle_marker_b4abf5a136ba4b6cb5110ecce0c5d586 = L.circle(
+                [51.427,-160.4405],
+                64000.0,
+                {
+                    color: '#fa8757',
+                    fillColor: '#fa8757',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_19a4b90442df409ebe9d0ef19f294d4d = L.popup({maxWidth: '300'});
+
+            
+                var html_83e714c1271745d79381196d622c9cb7 = $('         <div id="html_83e714c1271745d79381196d622c9cb7"                 style="width: 100.0%; height: 100.0%;">                 South of Alaska</div>                 ')[0];
+                popup_19a4b90442df409ebe9d0ef19f294d4d.setContent(html_83e714c1271745d79381196d622c9cb7);
+            
+
+            circle_marker_b4abf5a136ba4b6cb5110ecce0c5d586.bindPopup(popup_19a4b90442df409ebe9d0ef19f294d4d);
+
+            
+        
+        
+            
+
+            var circle_marker_f3f06b8e5658464f943e279c3628cc9b = L.circle(
+                [62.2179,-147.9712],
+                50000.0,
+                {
+                    color: '#fdaf79',
+                    fillColor: '#fdaf79',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_86c877a66d26460aa587a48b7759d1fc = L.popup({maxWidth: '300'});
+
+            
+                var html_b4fb89a9b1b14182906644d34ea56b9a = $('         <div id="html_b4fb89a9b1b14182906644d34ea56b9a"                 style="width: 100.0%; height: 100.0%;">                 65km NE of Sutton-Alpine, Alaska</div>                 ')[0];
+                popup_86c877a66d26460aa587a48b7759d1fc.setContent(html_b4fb89a9b1b14182906644d34ea56b9a);
+            
+
+            circle_marker_f3f06b8e5658464f943e279c3628cc9b.bindPopup(popup_86c877a66d26460aa587a48b7759d1fc);
+
+            
+        
+        
+            
+
+            var circle_marker_ce75b08ff0a247a1b0055fbfbf1efc7b = L.circle(
+                [60.6716,-151.1553],
+                32000.0,
+                {
+                    color: '#fdd19b',
+                    fillColor: '#fdd19b',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_355a1bf35ed043738e1655272dbbb48b = L.popup({maxWidth: '300'});
+
+            
+                var html_a9a2fccd4d87467fb9081ebfe1a0ed0d = $('         <div id="html_a9a2fccd4d87467fb9081ebfe1a0ed0d"                 style="width: 100.0%; height: 100.0%;">                 7km ESE of Nikiski, Alaska</div>                 ')[0];
+                popup_355a1bf35ed043738e1655272dbbb48b.setContent(html_a9a2fccd4d87467fb9081ebfe1a0ed0d);
+            
+
+            circle_marker_ce75b08ff0a247a1b0055fbfbf1efc7b.bindPopup(popup_355a1bf35ed043738e1655272dbbb48b);
+
+            
+        
+        
+            
+
+            var circle_marker_8f58f019431e463a9ef7299ca9a7c463 = L.circle(
+                [-41.7131,174.2686],
+                90000.0,
+                {
+                    color: '#dc3c28',
+                    fillColor: '#dc3c28',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_a2066d3c0d6447b09259e1289c6e60b6 = L.popup({maxWidth: '300'});
+
+            
+                var html_45b849224ff94121b6ddd0e2e96730a3 = $('         <div id="html_45b849224ff94121b6ddd0e2e96730a3"                 style="width: 100.0%; height: 100.0%;">                 34km SE of Blenheim, New Zealand</div>                 ')[0];
+                popup_a2066d3c0d6447b09259e1289c6e60b6.setContent(html_45b849224ff94121b6ddd0e2e96730a3);
+            
+
+            circle_marker_8f58f019431e463a9ef7299ca9a7c463.bindPopup(popup_a2066d3c0d6447b09259e1289c6e60b6);
+
+            
+        
+        
+            
+
+            var circle_marker_4124d61f9f0e46e89a4516265b29c881 = L.circle(
+                [64.9882,-147.2877],
+                28000.0,
+                {
+                    color: '#fdd6a3',
+                    fillColor: '#fdd6a3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_d06cec7d24304817b075ae6136404209 = L.popup({maxWidth: '300'});
+
+            
+                var html_782321260a0049809e44f085afabdc69 = $('         <div id="html_782321260a0049809e44f085afabdc69"                 style="width: 100.0%; height: 100.0%;">                 23km NNE of Badger, Alaska</div>                 ')[0];
+                popup_d06cec7d24304817b075ae6136404209.setContent(html_782321260a0049809e44f085afabdc69);
+            
+
+            circle_marker_4124d61f9f0e46e89a4516265b29c881.bindPopup(popup_d06cec7d24304817b075ae6136404209);
+
+            
+        
+        
+            
+
+            var circle_marker_d381ed3b39364ed2aa77a036701ae15d = L.circle(
+                [38.8204994,-122.81216429999999],
+                26400.0,
+                {
+                    color: '#fdd9a8',
+                    fillColor: '#fdd9a8',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_0b322b286006439d97e4d28742895335 = L.popup({maxWidth: '300'});
+
+            
+                var html_f05a9d49599848ccb59bebfebb5a96df = $('         <div id="html_f05a9d49599848ccb59bebfebb5a96df"                 style="width: 100.0%; height: 100.0%;">                 6km NW of The Geysers, California</div>                 ')[0];
+                popup_0b322b286006439d97e4d28742895335.setContent(html_f05a9d49599848ccb59bebfebb5a96df);
+            
+
+            circle_marker_d381ed3b39364ed2aa77a036701ae15d.bindPopup(popup_0b322b286006439d97e4d28742895335);
+
+            
+        
+        
+            
+
+            var circle_marker_b3c5a415a91741d896b39526891c2fa3 = L.circle(
+                [33.467,-116.40799999999999],
+                21800.0,
+                {
+                    color: '#fedfb4',
+                    fillColor: '#fedfb4',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_987ab7ed99264dceb06d3a4c6a8c3386 = L.popup({maxWidth: '300'});
+
+            
+                var html_fd78b241cbe24881bd19b610690fc5a9 = $('         <div id="html_fd78b241cbe24881bd19b610690fc5a9"                 style="width: 100.0%; height: 100.0%;">                 24km SSW of La Quinta, CA</div>                 ')[0];
+                popup_987ab7ed99264dceb06d3a4c6a8c3386.setContent(html_fd78b241cbe24881bd19b610690fc5a9);
+            
+
+            circle_marker_b3c5a415a91741d896b39526891c2fa3.bindPopup(popup_987ab7ed99264dceb06d3a4c6a8c3386);
+
+            
+        
+        
+            
+
+            var circle_marker_24481ba93ed44e2ea5681bc27f491722 = L.circle(
+                [33.5085,-116.51533329999998],
+                15800.0,
+                {
+                    color: '#fee6c4',
+                    fillColor: '#fee6c4',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_00e5125135604dcb8404df77cf10aab1 = L.popup({maxWidth: '300'});
+
+            
+                var html_e988653988a3463d881168f152d5bd8b = $('         <div id="html_e988653988a3463d881168f152d5bd8b"                 style="width: 100.0%; height: 100.0%;">                 16km ESE of Anza, CA</div>                 ')[0];
+                popup_00e5125135604dcb8404df77cf10aab1.setContent(html_e988653988a3463d881168f152d5bd8b);
+            
+
+            circle_marker_24481ba93ed44e2ea5681bc27f491722.bindPopup(popup_00e5125135604dcb8404df77cf10aab1);
+
+            
+        
+        
+            
+
+            var circle_marker_e924594773ff4866bcc759c4097dd379 = L.circle(
+                [33.4623333,-116.41366670000001],
+                15400.0,
+                {
+                    color: '#fee7c5',
+                    fillColor: '#fee7c5',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_59f2533956f84d81b885c8d9952b96ba = L.popup({maxWidth: '300'});
+
+            
+                var html_c0c16f241c0443c1aac883289392996a = $('         <div id="html_c0c16f241c0443c1aac883289392996a"                 style="width: 100.0%; height: 100.0%;">                 23km N of Borrego Springs, CA</div>                 ')[0];
+                popup_59f2533956f84d81b885c8d9952b96ba.setContent(html_c0c16f241c0443c1aac883289392996a);
+            
+
+            circle_marker_e924594773ff4866bcc759c4097dd379.bindPopup(popup_59f2533956f84d81b885c8d9952b96ba);
+
+            
+        
+        
+            
+
+            var circle_marker_54956902fdd840e2bc526afd7fdcfbbc = L.circle(
+                [33.5058333,-116.50783329999999],
+                15200.0,
+                {
+                    color: '#fee7c5',
+                    fillColor: '#fee7c5',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_ce8bc559f92d4f1e933c9d05a8fa7038 = L.popup({maxWidth: '300'});
+
+            
+                var html_b8cd352b94ff43efa22f00929dac2451 = $('         <div id="html_b8cd352b94ff43efa22f00929dac2451"                 style="width: 100.0%; height: 100.0%;">                 16km ESE of Anza, CA</div>                 ')[0];
+                popup_ce8bc559f92d4f1e933c9d05a8fa7038.setContent(html_b8cd352b94ff43efa22f00929dac2451);
+            
+
+            circle_marker_54956902fdd840e2bc526afd7fdcfbbc.bindPopup(popup_ce8bc559f92d4f1e933c9d05a8fa7038);
+
+            
+        
+        
+            
+
+            var circle_marker_2b837971c12142db9f1ff3931ec2023e = L.circle(
+                [38.4175,-118.7699],
+                16000.0,
+                {
+                    color: '#fee5c3',
+                    fillColor: '#fee5c3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_fe9702c50c3544ad9726c90bf77b5e04 = L.popup({maxWidth: '300'});
+
+            
+                var html_c0d51471efab449cb35e0f0dc9b98cf8 = $('         <div id="html_c0d51471efab449cb35e0f0dc9b98cf8"                 style="width: 100.0%; height: 100.0%;">                 17km SW of Hawthorne, Nevada</div>                 ')[0];
+                popup_fe9702c50c3544ad9726c90bf77b5e04.setContent(html_c0d51471efab449cb35e0f0dc9b98cf8);
+            
+
+            circle_marker_2b837971c12142db9f1ff3931ec2023e.bindPopup(popup_fe9702c50c3544ad9726c90bf77b5e04);
+
+            
+        
+        
+            
+
+            var circle_marker_42a3d04ad2c24bb6b8d534f9d5bc7a1b = L.circle(
+                [38.4119,-118.9114],
+                24000.0,
+                {
+                    color: '#fddbad',
+                    fillColor: '#fddbad',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_5089d7a70c77437cb6619fe2bdfc55c4 = L.popup({maxWidth: '300'});
+
+            
+                var html_a15a2171e5d442f185695a2cdff700a8 = $('         <div id="html_a15a2171e5d442f185695a2cdff700a8"                 style="width: 100.0%; height: 100.0%;">                 27km WSW of Hawthorne, Nevada</div>                 ')[0];
+                popup_5089d7a70c77437cb6619fe2bdfc55c4.setContent(html_a15a2171e5d442f185695a2cdff700a8);
+            
+
+            circle_marker_42a3d04ad2c24bb6b8d534f9d5bc7a1b.bindPopup(popup_5089d7a70c77437cb6619fe2bdfc55c4);
+
+            
+        
+        
+            
+
+            var circle_marker_5df8321c7b354b1184093ef53d77d2a3 = L.circle(
+                [38.7779999,-122.7563324],
+                22000.0,
+                {
+                    color: '#fddeb3',
+                    fillColor: '#fddeb3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_fe2aa0533a1c4d6d92faf45d40e3c8a4 = L.popup({maxWidth: '300'});
+
+            
+                var html_fad841934758441894bf1a0b90695d00 = $('         <div id="html_fad841934758441894bf1a0b90695d00"                 style="width: 100.0%; height: 100.0%;">                 0km N of The Geysers, California</div>                 ')[0];
+                popup_fe2aa0533a1c4d6d92faf45d40e3c8a4.setContent(html_fad841934758441894bf1a0b90695d00);
+            
+
+            circle_marker_5df8321c7b354b1184093ef53d77d2a3.bindPopup(popup_fe2aa0533a1c4d6d92faf45d40e3c8a4);
+
+            
+        
+        
+            
+
+            var circle_marker_2d5fbfa9f99e4f7d947958ff60223fda = L.circle(
+                [36.9805,-116.4279],
+                -2000.0,
+                {
+                    color: '#fff7ec',
+                    fillColor: '#fff7ec',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_1d30d2dd21834eec9b0da8376c1eca18 = L.popup({maxWidth: '300'});
+
+            
+                var html_d6619158b0ea455d90dcb3468294d304 = $('         <div id="html_d6619158b0ea455d90dcb3468294d304"                 style="width: 100.0%; height: 100.0%;">                 30km ENE of Beatty, Nevada</div>                 ')[0];
+                popup_1d30d2dd21834eec9b0da8376c1eca18.setContent(html_d6619158b0ea455d90dcb3468294d304);
+            
+
+            circle_marker_2d5fbfa9f99e4f7d947958ff60223fda.bindPopup(popup_1d30d2dd21834eec9b0da8376c1eca18);
+
+            
+        
+        
+            
+
+            var circle_marker_a748ab91fb4d4a318e5133ecdbac1816 = L.circle(
+                [33.5606667,-117.7305],
+                42000.0,
+                {
+                    color: '#fdc18a',
+                    fillColor: '#fdc18a',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_3ab34f5ea8554599b434b6cdd29e9d8c = L.popup({maxWidth: '300'});
+
+            
+                var html_b469ff57edd1447686d23d0bd675bbe5 = $('         <div id="html_b469ff57edd1447686d23d0bd675bbe5"                 style="width: 100.0%; height: 100.0%;">                 1km SSW of Aliso Viejo, CA</div>                 ')[0];
+                popup_3ab34f5ea8554599b434b6cdd29e9d8c.setContent(html_b469ff57edd1447686d23d0bd675bbe5);
+            
+
+            circle_marker_a748ab91fb4d4a318e5133ecdbac1816.bindPopup(popup_3ab34f5ea8554599b434b6cdd29e9d8c);
+
+            
+        
+        
+            
+
+            var circle_marker_5efa72162de348b591478e50f1a14036 = L.circle(
+                [38.4264,-118.8949],
+                22000.0,
+                {
+                    color: '#fddeb3',
+                    fillColor: '#fddeb3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_371d66c08ca84790930a31655a26ca1b = L.popup({maxWidth: '300'});
+
+            
+                var html_03f79f1c8a1f4b7abbad6c74c0badc99 = $('         <div id="html_03f79f1c8a1f4b7abbad6c74c0badc99"                 style="width: 100.0%; height: 100.0%;">                 25km WSW of Hawthorne, Nevada</div>                 ')[0];
+                popup_371d66c08ca84790930a31655a26ca1b.setContent(html_03f79f1c8a1f4b7abbad6c74c0badc99);
+            
+
+            circle_marker_5efa72162de348b591478e50f1a14036.bindPopup(popup_371d66c08ca84790930a31655a26ca1b);
+
+            
+        
+        
+            
+
+            var circle_marker_6be99c173bf14f48a9e4e994084d6053 = L.circle(
+                [49.4395,-120.53933329999998],
+                45800.0,
+                {
+                    color: '#fdbb85',
+                    fillColor: '#fdbb85',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_1801aee7abe74a978587387917c13c03 = L.popup({maxWidth: '300'});
+
+            
+                var html_74eb2b13dba2420d895ed936f268f9be = $('         <div id="html_74eb2b13dba2420d895ed936f268f9be"                 style="width: 100.0%; height: 100.0%;">                 2km SW of Princeton, Canada</div>                 ')[0];
+                popup_1801aee7abe74a978587387917c13c03.setContent(html_74eb2b13dba2420d895ed936f268f9be);
+            
+
+            circle_marker_6be99c173bf14f48a9e4e994084d6053.bindPopup(popup_1801aee7abe74a978587387917c13c03);
+
+            
+        
+        
+            
+
+            var circle_marker_474f01e21d84478db7ef4d3a7c99f7cc = L.circle(
+                [38.8461685,-122.82766720000001],
+                41600.0,
+                {
+                    color: '#fdc28b',
+                    fillColor: '#fdc28b',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_0182d120055547daa661a2aa09b48938 = L.popup({maxWidth: '300'});
+
+            
+                var html_60057b16824b4c6c8d5d9fbb8033c029 = $('         <div id="html_60057b16824b4c6c8d5d9fbb8033c029"                 style="width: 100.0%; height: 100.0%;">                 9km WNW of Cobb, California</div>                 ')[0];
+                popup_0182d120055547daa661a2aa09b48938.setContent(html_60057b16824b4c6c8d5d9fbb8033c029);
+            
+
+            circle_marker_474f01e21d84478db7ef4d3a7c99f7cc.bindPopup(popup_0182d120055547daa661a2aa09b48938);
+
+            
+        
+        
+            
+
+            var circle_marker_95c94dd675f7496999b4d626c84c65c9 = L.circle(
+                [63.5185,-150.9481],
+                34000.0,
+                {
+                    color: '#fdce97',
+                    fillColor: '#fdce97',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_34394596835f49549fa02dd70c6d2af0 = L.popup({maxWidth: '300'});
+
+            
+                var html_83b62dadac9840aaab314a805d5d3218 = $('         <div id="html_83b62dadac9840aaab314a805d5d3218"                 style="width: 100.0%; height: 100.0%;">                 100km W of Cantwell, Alaska</div>                 ')[0];
+                popup_34394596835f49549fa02dd70c6d2af0.setContent(html_83b62dadac9840aaab314a805d5d3218);
+            
+
+            circle_marker_95c94dd675f7496999b4d626c84c65c9.bindPopup(popup_34394596835f49549fa02dd70c6d2af0);
+
+            
+        
+        
+            
+
+            var circle_marker_b0a9d82f479f475e83eb58dfcef361a0 = L.circle(
+                [48.008166700000004,-119.88133329999998],
+                35200.0,
+                {
+                    color: '#fdcc96',
+                    fillColor: '#fdcc96',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_fe8f3edb13bc488db04851d4900f54c5 = L.popup({maxWidth: '300'});
+
+            
+                var html_3cf82a2a9822433d97957fbaade8637d = $('         <div id="html_3cf82a2a9822433d97957fbaade8637d"                 style="width: 100.0%; height: 100.0%;">                 12km SW of Brewster, Washington</div>                 ')[0];
+                popup_fe8f3edb13bc488db04851d4900f54c5.setContent(html_3cf82a2a9822433d97957fbaade8637d);
+            
+
+            circle_marker_b0a9d82f479f475e83eb58dfcef361a0.bindPopup(popup_fe8f3edb13bc488db04851d4900f54c5);
+
+            
+        
+        
+            
+
+            var circle_marker_9347bfbc230942b9abb51d0e455cc6f9 = L.circle(
+                [66.4125,-147.7374],
+                26000.0,
+                {
+                    color: '#fdd9a8',
+                    fillColor: '#fdd9a8',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_e4f203afc7cf45769f531758e1ea73d0 = L.popup({maxWidth: '300'});
+
+            
+                var html_36d51de89b064a17b186a2a025fe3442 = $('         <div id="html_36d51de89b064a17b186a2a025fe3442"                 style="width: 100.0%; height: 100.0%;">                 111km W of Fort Yukon, Alaska</div>                 ')[0];
+                popup_e4f203afc7cf45769f531758e1ea73d0.setContent(html_36d51de89b064a17b186a2a025fe3442);
+            
+
+            circle_marker_9347bfbc230942b9abb51d0e455cc6f9.bindPopup(popup_e4f203afc7cf45769f531758e1ea73d0);
+
+            
+        
+        
+            
+
+            var circle_marker_b40202fe4c824635a6c0a71ca1dfd0b0 = L.circle(
+                [37.4317,-117.0239],
+                10000.0,
+                {
+                    color: '#feecd1',
+                    fillColor: '#feecd1',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_cf2182e4c52140ada3e63af405a7e987 = L.popup({maxWidth: '300'});
+
+            
+                var html_9d45e4b4237d49aa9be71b2850ab0fba = $('         <div id="html_9d45e4b4237d49aa9be71b2850ab0fba"                 style="width: 100.0%; height: 100.0%;">                 35km SSE of Goldfield, Nevada</div>                 ')[0];
+                popup_cf2182e4c52140ada3e63af405a7e987.setContent(html_9d45e4b4237d49aa9be71b2850ab0fba);
+            
+
+            circle_marker_b40202fe4c824635a6c0a71ca1dfd0b0.bindPopup(popup_cf2182e4c52140ada3e63af405a7e987);
+
+            
+        
+        
+            
+
+            var circle_marker_bd155471f83c442c980b84156156ef33 = L.circle(
+                [63.2005,-151.8192],
+                8000.0,
+                {
+                    color: '#feeed5',
+                    fillColor: '#feeed5',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_a12c8bda06824a418b4bbea4be0b786b = L.popup({maxWidth: '300'});
+
+            
+                var html_aa027d38fcc943e0a979987d0826cd37 = $('         <div id="html_aa027d38fcc943e0a979987d0826cd37"                 style="width: 100.0%; height: 100.0%;">                 131km NW of Talkeetna, Alaska</div>                 ')[0];
+                popup_a12c8bda06824a418b4bbea4be0b786b.setContent(html_aa027d38fcc943e0a979987d0826cd37);
+            
+
+            circle_marker_bd155471f83c442c980b84156156ef33.bindPopup(popup_a12c8bda06824a418b4bbea4be0b786b);
+
+            
+        
+        
+            
+
+            var circle_marker_6836f5e05b12496f855b23044540c535 = L.circle(
+                [60.2337,-140.6556],
+                28000.0,
+                {
+                    color: '#fdd6a3',
+                    fillColor: '#fdd6a3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_e075c117e6704fa285f12f6ca29ba5b2 = L.popup({maxWidth: '300'});
+
+            
+                var html_885bab9720f24ce1ab39de8d5852f6be = $('         <div id="html_885bab9720f24ce1ab39de8d5852f6be"                 style="width: 100.0%; height: 100.0%;">                 92km NNW of Yakutat, Alaska</div>                 ')[0];
+                popup_e075c117e6704fa285f12f6ca29ba5b2.setContent(html_885bab9720f24ce1ab39de8d5852f6be);
+            
+
+            circle_marker_6836f5e05b12496f855b23044540c535.bindPopup(popup_e075c117e6704fa285f12f6ca29ba5b2);
+
+            
+        
+        
+            
+
+            var circle_marker_eea06fdc972149c69d3ad9d6668f4bb4 = L.circle(
+                [38.4104,-118.9106],
+                32000.0,
+                {
+                    color: '#fdd19b',
+                    fillColor: '#fdd19b',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_b59149161a1546579b8ede9aac2f734e = L.popup({maxWidth: '300'});
+
+            
+                var html_96d83f5ac77248cca23a9e1b0fb7f356 = $('         <div id="html_96d83f5ac77248cca23a9e1b0fb7f356"                 style="width: 100.0%; height: 100.0%;">                 27km WSW of Hawthorne, Nevada</div>                 ')[0];
+                popup_b59149161a1546579b8ede9aac2f734e.setContent(html_96d83f5ac77248cca23a9e1b0fb7f356);
+            
+
+            circle_marker_eea06fdc972149c69d3ad9d6668f4bb4.bindPopup(popup_b59149161a1546579b8ede9aac2f734e);
+
+            
+        
+        
+            
+
+            var circle_marker_26dcd30c412840bb8ad85dc5afb9c136 = L.circle(
+                [33.5003333,-116.78916670000001],
+                9400.0,
+                {
+                    color: '#feedd3',
+                    fillColor: '#feedd3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_5a82f275767b467cbd20b7b19759e592 = L.popup({maxWidth: '300'});
+
+            
+                var html_22db054c127143e8abe0c6ff95db4e08 = $('         <div id="html_22db054c127143e8abe0c6ff95db4e08"                 style="width: 100.0%; height: 100.0%;">                 10km NE of Aguanga, CA</div>                 ')[0];
+                popup_5a82f275767b467cbd20b7b19759e592.setContent(html_22db054c127143e8abe0c6ff95db4e08);
+            
+
+            circle_marker_26dcd30c412840bb8ad85dc5afb9c136.bindPopup(popup_5a82f275767b467cbd20b7b19759e592);
+
+            
+        
+        
+            
+
+            var circle_marker_dd3a8cbda7d344079ccd01d10a5433c9 = L.circle(
+                [63.5361,-147.9867],
+                40000.0,
+                {
+                    color: '#fdc48d',
+                    fillColor: '#fdc48d',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_a5ba836adaa647f5a44c93ba5e298502 = L.popup({maxWidth: '300'});
+
+            
+                var html_ad5fede2650e469f8343e97e4796f838 = $('         <div id="html_ad5fede2650e469f8343e97e4796f838"                 style="width: 100.0%; height: 100.0%;">                 50km ENE of Cantwell, Alaska</div>                 ')[0];
+                popup_a5ba836adaa647f5a44c93ba5e298502.setContent(html_ad5fede2650e469f8343e97e4796f838);
+            
+
+            circle_marker_dd3a8cbda7d344079ccd01d10a5433c9.bindPopup(popup_a5ba836adaa647f5a44c93ba5e298502);
+
+            
+        
+        
+            
+
+            var circle_marker_8ee1c67d78f44b53bf085b1b1877585a = L.circle(
+                [33.759666700000004,-116.0365],
+                30800.0,
+                {
+                    color: '#fdd39d',
+                    fillColor: '#fdd39d',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_321bafc40b7647ff902a05efe0b558da = L.popup({maxWidth: '300'});
+
+            
+                var html_b49c1af696784ad09c3f6d54aa43c528 = $('         <div id="html_b49c1af696784ad09c3f6d54aa43c528"                 style="width: 100.0%; height: 100.0%;">                 16km NE of Coachella, CA</div>                 ')[0];
+                popup_321bafc40b7647ff902a05efe0b558da.setContent(html_b49c1af696784ad09c3f6d54aa43c528);
+            
+
+            circle_marker_8ee1c67d78f44b53bf085b1b1877585a.bindPopup(popup_321bafc40b7647ff902a05efe0b558da);
+
+            
+        
+        
+            
+
+            var circle_marker_f65cf1c6a5ca4d2bb85a184a316d6b24 = L.circle(
+                [37.1285,-117.7383],
+                8000.0,
+                {
+                    color: '#feeed5',
+                    fillColor: '#feeed5',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_e5e4428eec4a447185d66b3ec15b392b = L.popup({maxWidth: '300'});
+
+            
+                var html_c48eaba176fe4c7cac5a8f33bcad160e = $('         <div id="html_c48eaba176fe4c7cac5a8f33bcad160e"                 style="width: 100.0%; height: 100.0%;">                 49km E of Big Pine, California</div>                 ')[0];
+                popup_e5e4428eec4a447185d66b3ec15b392b.setContent(html_c48eaba176fe4c7cac5a8f33bcad160e);
+            
+
+            circle_marker_f65cf1c6a5ca4d2bb85a184a316d6b24.bindPopup(popup_e5e4428eec4a447185d66b3ec15b392b);
+
+            
+        
+        
+            
+
+            var circle_marker_37653252384d4beda2b7359a979fab26 = L.circle(
+                [32.7583333,-116.8926667],
+                29800.0,
+                {
+                    color: '#fdd49f',
+                    fillColor: '#fdd49f',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_d3188b1628614377a2e0b8afe240a1d2 = L.popup({maxWidth: '300'});
+
+            
+                var html_72f2a11ff3d54a74abec34acdb83aa1f = $('         <div id="html_72f2a11ff3d54a74abec34acdb83aa1f"                 style="width: 100.0%; height: 100.0%;">                 4km ENE of Rancho San Diego, CA</div>                 ')[0];
+                popup_d3188b1628614377a2e0b8afe240a1d2.setContent(html_72f2a11ff3d54a74abec34acdb83aa1f);
+            
+
+            circle_marker_37653252384d4beda2b7359a979fab26.bindPopup(popup_d3188b1628614377a2e0b8afe240a1d2);
+
+            
+        
+        
+            
+
+            var circle_marker_f5ed5ad387c3494b9aabdef40a9e9b63 = L.circle(
+                [36.6291,-116.9416],
+                12000.0,
+                {
+                    color: '#feeacc',
+                    fillColor: '#feeacc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_48e94f981f4e4a7bbfdb10a82d1d81f7 = L.popup({maxWidth: '300'});
+
+            
+                var html_912e7fe1ec2749959cb12b66743fb618 = $('         <div id="html_912e7fe1ec2749959cb12b66743fb618"                 style="width: 100.0%; height: 100.0%;">                 35km SSW of Beatty, Nevada</div>                 ')[0];
+                popup_48e94f981f4e4a7bbfdb10a82d1d81f7.setContent(html_912e7fe1ec2749959cb12b66743fb618);
+            
+
+            circle_marker_f5ed5ad387c3494b9aabdef40a9e9b63.bindPopup(popup_48e94f981f4e4a7bbfdb10a82d1d81f7);
+
+            
+        
+        
+            
+
+            var circle_marker_abdbf6c4f6ce400d95d5e6b72fd9e35f = L.circle(
+                [46.2058333,-122.19183329999998],
+                10400.0,
+                {
+                    color: '#feecd1',
+                    fillColor: '#feecd1',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_8f120befc6d44adb9e8b9a85c710f068 = L.popup({maxWidth: '300'});
+
+            
+                var html_4e3f55a9afdf402399f4fb26549ea5db = $('         <div id="html_4e3f55a9afdf402399f4fb26549ea5db"                 style="width: 100.0%; height: 100.0%;">                 38km NNE of Amboy, Washington</div>                 ')[0];
+                popup_8f120befc6d44adb9e8b9a85c710f068.setContent(html_4e3f55a9afdf402399f4fb26549ea5db);
+            
+
+            circle_marker_abdbf6c4f6ce400d95d5e6b72fd9e35f.bindPopup(popup_8f120befc6d44adb9e8b9a85c710f068);
+
+            
+        
+        
+            
+
+            var circle_marker_19573fd16adb452cb6ed2d4a688d9c2a = L.circle(
+                [19.014,-66.0255],
+                48000.0,
+                {
+                    color: '#fdb57e',
+                    fillColor: '#fdb57e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_1910b038ebbb4af9a9b2fe0747e99f73 = L.popup({maxWidth: '300'});
+
+            
+                var html_e0e85fc0727f474aa9a63e2b1f9acd12 = $('         <div id="html_e0e85fc0727f474aa9a63e2b1f9acd12"                 style="width: 100.0%; height: 100.0%;">                 61km N of San Juan, Puerto Rico</div>                 ')[0];
+                popup_1910b038ebbb4af9a9b2fe0747e99f73.setContent(html_e0e85fc0727f474aa9a63e2b1f9acd12);
+            
+
+            circle_marker_19573fd16adb452cb6ed2d4a688d9c2a.bindPopup(popup_1910b038ebbb4af9a9b2fe0747e99f73);
+
+            
+        
+        
+            
+
+            var circle_marker_7e99f6e158174bf3a9491f2b1b925125 = L.circle(
+                [19.0361,-64.888],
+                44000.0,
+                {
+                    color: '#fdbe87',
+                    fillColor: '#fdbe87',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_e99a638a14cf4502b82724405cb96728 = L.popup({maxWidth: '300'});
+
+            
+                var html_22986ca4e5534acfbf503ff30220453e = $('         <div id="html_22986ca4e5534acfbf503ff30220453e"                 style="width: 100.0%; height: 100.0%;">                 74km NNW of Road Town, British Virgin Islands</div>                 ')[0];
+                popup_e99a638a14cf4502b82724405cb96728.setContent(html_22986ca4e5534acfbf503ff30220453e);
+            
+
+            circle_marker_7e99f6e158174bf3a9491f2b1b925125.bindPopup(popup_e99a638a14cf4502b82724405cb96728);
+
+            
+        
+        
+            
+
+            var circle_marker_3b37d6fcfd624a19b9936d09e477e7f9 = L.circle(
+                [63.5206,-151.2926],
+                12000.0,
+                {
+                    color: '#feeacc',
+                    fillColor: '#feeacc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_cd68be1a8a9844cab9af3c5d59a3c8d8 = L.popup({maxWidth: '300'});
+
+            
+                var html_42a71edc0fdd4366a974585b34aae107 = $('         <div id="html_42a71edc0fdd4366a974585b34aae107"                 style="width: 100.0%; height: 100.0%;">                 117km W of Cantwell, Alaska</div>                 ')[0];
+                popup_cd68be1a8a9844cab9af3c5d59a3c8d8.setContent(html_42a71edc0fdd4366a974585b34aae107);
+            
+
+            circle_marker_3b37d6fcfd624a19b9936d09e477e7f9.bindPopup(popup_cd68be1a8a9844cab9af3c5d59a3c8d8);
+
+            
+        
+        
+            
+
+            var circle_marker_6f8e3bb060be492abb1146030fd709da = L.circle(
+                [62.8467,-150.0503],
+                18000.0,
+                {
+                    color: '#fee3bd',
+                    fillColor: '#fee3bd',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_9b86c6b3d3ff44e690c9cb4e094a2c46 = L.popup({maxWidth: '300'});
+
+            
+                var html_c87b6de22e2c498684f88831d2c46231 = $('         <div id="html_c87b6de22e2c498684f88831d2c46231"                 style="width: 100.0%; height: 100.0%;">                 58km N of Talkeetna, Alaska</div>                 ')[0];
+                popup_9b86c6b3d3ff44e690c9cb4e094a2c46.setContent(html_c87b6de22e2c498684f88831d2c46231);
+            
+
+            circle_marker_6f8e3bb060be492abb1146030fd709da.bindPopup(popup_9b86c6b3d3ff44e690c9cb4e094a2c46);
+
+            
+        
+        
+            
+
+            var circle_marker_77e265fe2d754d57a663d54a6fa3d4bb = L.circle(
+                [19.3866667,-155.2773333],
+                44800.00000000001,
+                {
+                    color: '#fdbd86',
+                    fillColor: '#fdbd86',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_0c8f409c436d4addbcfc114c1ff0813f = L.popup({maxWidth: '300'});
+
+            
+                var html_9cb2417e2ac24f6a902486a3f50e6891 = $('         <div id="html_9cb2417e2ac24f6a902486a3f50e6891"                 style="width: 100.0%; height: 100.0%;">                 6km SW of Volcano, Hawaii</div>                 ')[0];
+                popup_0c8f409c436d4addbcfc114c1ff0813f.setContent(html_9cb2417e2ac24f6a902486a3f50e6891);
+            
+
+            circle_marker_77e265fe2d754d57a663d54a6fa3d4bb.bindPopup(popup_0c8f409c436d4addbcfc114c1ff0813f);
+
+            
+        
+        
+            
+
+            var circle_marker_2e19c75434e8417b9c5c01e361aa10af = L.circle(
+                [19.4085,-155.28216669999998],
+                39600.0,
+                {
+                    color: '#fdc58e',
+                    fillColor: '#fdc58e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_f7a60a94561f496280191ad78375812b = L.popup({maxWidth: '300'});
+
+            
+                var html_e416f5d9a9c14555bc04cefa45f34872 = $('         <div id="html_e416f5d9a9c14555bc04cefa45f34872"                 style="width: 100.0%; height: 100.0%;">                 5km WSW of Volcano, Hawaii</div>                 ')[0];
+                popup_f7a60a94561f496280191ad78375812b.setContent(html_e416f5d9a9c14555bc04cefa45f34872);
+            
+
+            circle_marker_2e19c75434e8417b9c5c01e361aa10af.bindPopup(popup_f7a60a94561f496280191ad78375812b);
+
+            
+        
+        
+            
+
+            var circle_marker_936b24940cb44ab2b0a8e2d292882f7a = L.circle(
+                [35.0515,-118.351],
+                24400.0,
+                {
+                    color: '#fddbad',
+                    fillColor: '#fddbad',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_6b3ccd9ce23c49118aff61dbe033f8de = L.popup({maxWidth: '300'});
+
+            
+                var html_dbd0b14b62684252a3fc5d2cd2bb5442 = $('         <div id="html_dbd0b14b62684252a3fc5d2cd2bb5442"                 style="width: 100.0%; height: 100.0%;">                 13km SE of Tehachapi, CA</div>                 ')[0];
+                popup_6b3ccd9ce23c49118aff61dbe033f8de.setContent(html_dbd0b14b62684252a3fc5d2cd2bb5442);
+            
+
+            circle_marker_936b24940cb44ab2b0a8e2d292882f7a.bindPopup(popup_6b3ccd9ce23c49118aff61dbe033f8de);
+
+            
+        
+        
+            
+
+            var circle_marker_6c31ffce7d9d478b8a1298d22d4e0bad = L.circle(
+                [33.233000000000004,-115.67216670000002],
+                42800.0,
+                {
+                    color: '#fdc089',
+                    fillColor: '#fdc089',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_5ea8b401877b4b73927ddf96e1a68be2 = L.popup({maxWidth: '300'});
+
+            
+                var html_c4e1651126254584a153eea28f0983f7 = $('         <div id="html_c4e1651126254584a153eea28f0983f7"                 style="width: 100.0%; height: 100.0%;">                 14km SSE of Bombay Beach, CA</div>                 ')[0];
+                popup_5ea8b401877b4b73927ddf96e1a68be2.setContent(html_c4e1651126254584a153eea28f0983f7);
+            
+
+            circle_marker_6c31ffce7d9d478b8a1298d22d4e0bad.bindPopup(popup_5ea8b401877b4b73927ddf96e1a68be2);
+
+            
+        
+        
+            
+
+            var circle_marker_cd1b1ad10d884930966f95164cdbc452 = L.circle(
+                [45.2378333,-113.12183329999999],
+                40199.99999999999,
+                {
+                    color: '#fdc48d',
+                    fillColor: '#fdc48d',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_f02ea46289ca4511af7496203abde107 = L.popup({maxWidth: '300'});
+
+            
+                var html_6c6d6f1b641b4fa781b62a5eff1f59ba = $('         <div id="html_6c6d6f1b641b4fa781b62a5eff1f59ba"                 style="width: 100.0%; height: 100.0%;">                 38km W of Dillon, Montana</div>                 ')[0];
+                popup_f02ea46289ca4511af7496203abde107.setContent(html_6c6d6f1b641b4fa781b62a5eff1f59ba);
+            
+
+            circle_marker_cd1b1ad10d884930966f95164cdbc452.bindPopup(popup_f02ea46289ca4511af7496203abde107);
+
+            
+        
+        
+            
+
+            var circle_marker_af38df02ddc54a2aa75c8f62620b2e53 = L.circle(
+                [38.4361,-118.8848],
+                22000.0,
+                {
+                    color: '#fddeb3',
+                    fillColor: '#fddeb3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_b2b845f8f9f24ee498417458505cd2cb = L.popup({maxWidth: '300'});
+
+            
+                var html_5f23ad143639493cb19781ec2bb82559 = $('         <div id="html_5f23ad143639493cb19781ec2bb82559"                 style="width: 100.0%; height: 100.0%;">                 24km WSW of Hawthorne, Nevada</div>                 ')[0];
+                popup_b2b845f8f9f24ee498417458505cd2cb.setContent(html_5f23ad143639493cb19781ec2bb82559);
+            
+
+            circle_marker_af38df02ddc54a2aa75c8f62620b2e53.bindPopup(popup_b2b845f8f9f24ee498417458505cd2cb);
+
+            
+        
+        
+            
+
+            var circle_marker_3a5a2575fe764fb0a1750b2e4cec36dc = L.circle(
+                [62.2163,-150.1332],
+                28000.0,
+                {
+                    color: '#fdd6a3',
+                    fillColor: '#fdd6a3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_83539d47f1ae4a0d88c20f5dd810edf9 = L.popup({maxWidth: '300'});
+
+            
+                var html_85af034ff0bb4f62b1bcecb8cf5f68d0 = $('         <div id="html_85af034ff0bb4f62b1bcecb8cf5f68d0"                 style="width: 100.0%; height: 100.0%;">                 12km S of Talkeetna, Alaska</div>                 ')[0];
+                popup_83539d47f1ae4a0d88c20f5dd810edf9.setContent(html_85af034ff0bb4f62b1bcecb8cf5f68d0);
+            
+
+            circle_marker_3a5a2575fe764fb0a1750b2e4cec36dc.bindPopup(popup_83539d47f1ae4a0d88c20f5dd810edf9);
+
+            
+        
+        
+            
+
+            var circle_marker_2d9284b4b4ad4dbeb99eec2ac81c7aff = L.circle(
+                [37.7938,-117.7248],
+                30000.0,
+                {
+                    color: '#fdd49e',
+                    fillColor: '#fdd49e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_12a2d679c757488a918d3b3df93b911d = L.popup({maxWidth: '300'});
+
+            
+                var html_b136a13260cc4fcb8399c16e735fb28f = $('         <div id="html_b136a13260cc4fcb8399c16e735fb28f"                 style="width: 100.0%; height: 100.0%;">                 44km WNW of Goldfield, Nevada</div>                 ')[0];
+                popup_12a2d679c757488a918d3b3df93b911d.setContent(html_b136a13260cc4fcb8399c16e735fb28f);
+            
+
+            circle_marker_2d9284b4b4ad4dbeb99eec2ac81c7aff.bindPopup(popup_12a2d679c757488a918d3b3df93b911d);
+
+            
+        
+        
+            
+
+            var circle_marker_df5d880423e24e049f179804f8649f63 = L.circle(
+                [38.4247,-118.8698],
+                30000.0,
+                {
+                    color: '#fdd49e',
+                    fillColor: '#fdd49e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_0471d819058a409aa1eeb9851186da95 = L.popup({maxWidth: '300'});
+
+            
+                var html_7008491888f048f39cbbd9dd929a20d6 = $('         <div id="html_7008491888f048f39cbbd9dd929a20d6"                 style="width: 100.0%; height: 100.0%;">                 24km WSW of Hawthorne, Nevada</div>                 ')[0];
+                popup_0471d819058a409aa1eeb9851186da95.setContent(html_7008491888f048f39cbbd9dd929a20d6);
+            
+
+            circle_marker_df5d880423e24e049f179804f8649f63.bindPopup(popup_0471d819058a409aa1eeb9851186da95);
+
+            
+        
+        
+            
+
+            var circle_marker_e3702faa827a4423aa01098e53b6d0b1 = L.circle(
+                [19.0986,-66.0558],
+                58000.0,
+                {
+                    color: '#fc9863',
+                    fillColor: '#fc9863',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_8606336047924008b30627b562dd1234 = L.popup({maxWidth: '300'});
+
+            
+                var html_10c17d8ac6b3476ba9ee40bb6163e1b3 = $('         <div id="html_10c17d8ac6b3476ba9ee40bb6163e1b3"                 style="width: 100.0%; height: 100.0%;">                 74km N of San Juan, Puerto Rico</div>                 ')[0];
+                popup_8606336047924008b30627b562dd1234.setContent(html_10c17d8ac6b3476ba9ee40bb6163e1b3);
+            
+
+            circle_marker_e3702faa827a4423aa01098e53b6d0b1.bindPopup(popup_8606336047924008b30627b562dd1234);
+
+            
+        
+        
+            
+
+            var circle_marker_88d6954f03574f97abc87d816afc535f = L.circle(
+                [33.4988333,-116.78966670000001],
+                16200.000000000002,
+                {
+                    color: '#fee5c3',
+                    fillColor: '#fee5c3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_defbf9af0ec74bb4b82bba5a8021c8b0 = L.popup({maxWidth: '300'});
+
+            
+                var html_96b93aafabdd4e93abd46012d17b6645 = $('         <div id="html_96b93aafabdd4e93abd46012d17b6645"                 style="width: 100.0%; height: 100.0%;">                 9km NE of Aguanga, CA</div>                 ')[0];
+                popup_defbf9af0ec74bb4b82bba5a8021c8b0.setContent(html_96b93aafabdd4e93abd46012d17b6645);
+            
+
+            circle_marker_88d6954f03574f97abc87d816afc535f.bindPopup(popup_defbf9af0ec74bb4b82bba5a8021c8b0);
+
+            
+        
+        
+            
+
+            var circle_marker_079e35f0db8044e89d521e76bea68a43 = L.circle(
+                [46.5715,-111.96700000000001],
+                30600.0,
+                {
+                    color: '#fdd39d',
+                    fillColor: '#fdd39d',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_dce7f8baf4804e848352fb30b8de19f9 = L.popup({maxWidth: '300'});
+
+            
+                var html_6f172d5d1ecb40fbbb2ae7c9859e3a15 = $('         <div id="html_6f172d5d1ecb40fbbb2ae7c9859e3a15"                 style="width: 100.0%; height: 100.0%;">                 4km NW of Montana City, Montana</div>                 ')[0];
+                popup_dce7f8baf4804e848352fb30b8de19f9.setContent(html_6f172d5d1ecb40fbbb2ae7c9859e3a15);
+            
+
+            circle_marker_079e35f0db8044e89d521e76bea68a43.bindPopup(popup_dce7f8baf4804e848352fb30b8de19f9);
+
+            
+        
+        
+            
+
+            var circle_marker_3ce65d8c2edc4ce1be80f41ec409d845 = L.circle(
+                [33.6531667,-116.73516670000001],
+                12200.0,
+                {
+                    color: '#feeacc',
+                    fillColor: '#feeacc',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_d1814f324df4490da9c2abf041fa595f = L.popup({maxWidth: '300'});
+
+            
+                var html_2cc19ec39cce48ab8a9fe764cb5a4f74 = $('         <div id="html_2cc19ec39cce48ab8a9fe764cb5a4f74"                 style="width: 100.0%; height: 100.0%;">                 10km S of Idyllwild, CA</div>                 ')[0];
+                popup_d1814f324df4490da9c2abf041fa595f.setContent(html_2cc19ec39cce48ab8a9fe764cb5a4f74);
+            
+
+            circle_marker_3ce65d8c2edc4ce1be80f41ec409d845.bindPopup(popup_d1814f324df4490da9c2abf041fa595f);
+
+            
+        
+        
+            
+
+            var circle_marker_6881a658a5204dce936f12cdaf8e5861 = L.circle(
+                [-8.1829,117.5704],
+                92000.0,
+                {
+                    color: '#d93523',
+                    fillColor: '#d93523',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_20ef598007704a15bd3dfdde2d54431b = L.popup({maxWidth: '300'});
+
+            
+                var html_d592120663f54cb69fac3350b474dcc7 = $('         <div id="html_d592120663f54cb69fac3350b474dcc7"                 style="width: 100.0%; height: 100.0%;">                 22km WSW of Labuhankananga, Indonesia</div>                 ')[0];
+                popup_20ef598007704a15bd3dfdde2d54431b.setContent(html_d592120663f54cb69fac3350b474dcc7);
+            
+
+            circle_marker_6881a658a5204dce936f12cdaf8e5861.bindPopup(popup_20ef598007704a15bd3dfdde2d54431b);
+
+            
+        
+        
+            
+
+            var circle_marker_cf4b3d1ad61441789ba7c3d9d29bac47 = L.circle(
+                [34.3433333,-116.88216670000001],
+                27599.999999999996,
+                {
+                    color: '#fdd7a4',
+                    fillColor: '#fdd7a4',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_c472c7ab558543f497e690cec16252ee = L.popup({maxWidth: '300'});
+
+            
+                var html_689ee3aa696b49698cc3fd635c2b07ef = $('         <div id="html_689ee3aa696b49698cc3fd635c2b07ef"                 style="width: 100.0%; height: 100.0%;">                 10km NNW of Big Bear City, CA</div>                 ')[0];
+                popup_c472c7ab558543f497e690cec16252ee.setContent(html_689ee3aa696b49698cc3fd635c2b07ef);
+            
+
+            circle_marker_cf4b3d1ad61441789ba7c3d9d29bac47.bindPopup(popup_c472c7ab558543f497e690cec16252ee);
+
+            
+        
+        
+            
+
+            var circle_marker_244ac017ab9e4bde99450df137bace0d = L.circle(
+                [63.6097,-147.6306],
+                28000.0,
+                {
+                    color: '#fdd6a3',
+                    fillColor: '#fdd6a3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_95a4781872e6432ea215f4074bb408c5 = L.popup({maxWidth: '300'});
+
+            
+                var html_430dc36f4f3f48ec8c13cc9f761f0e6b = $('         <div id="html_430dc36f4f3f48ec8c13cc9f761f0e6b"                 style="width: 100.0%; height: 100.0%;">                 70km ENE of Cantwell, Alaska</div>                 ')[0];
+                popup_95a4781872e6432ea215f4074bb408c5.setContent(html_430dc36f4f3f48ec8c13cc9f761f0e6b);
+            
+
+            circle_marker_244ac017ab9e4bde99450df137bace0d.bindPopup(popup_95a4781872e6432ea215f4074bb408c5);
+
+            
+        
+        
+            
+
+            var circle_marker_6653061cadfe4baf9195c2d231ba5889 = L.circle(
+                [38.4327,-118.8744],
+                22000.0,
+                {
+                    color: '#fddeb3',
+                    fillColor: '#fddeb3',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_d2a26b12b00443629b23ff3d5d3d3fca = L.popup({maxWidth: '300'});
+
+            
+                var html_01556b10a4d74e4e988196c101d6e644 = $('         <div id="html_01556b10a4d74e4e988196c101d6e644"                 style="width: 100.0%; height: 100.0%;">                 24km WSW of Hawthorne, Nevada</div>                 ')[0];
+                popup_d2a26b12b00443629b23ff3d5d3d3fca.setContent(html_01556b10a4d74e4e988196c101d6e644);
+            
+
+            circle_marker_6653061cadfe4baf9195c2d231ba5889.bindPopup(popup_d2a26b12b00443629b23ff3d5d3d3fca);
+
+            
+        
+        
+            
+
+            var circle_marker_8850c3c71b414086973afd8117e7bc62 = L.circle(
+                [40.304668400000004,-124.04966740000002],
+                65400.0,
+                {
+                    color: '#f98556',
+                    fillColor: '#f98556',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_e1994dfef31f498192fb08139eb3e01f = L.popup({maxWidth: '300'});
+
+            
+                var html_e6c525c2c26844cb940a00f206b4d1c3 = $('         <div id="html_e6c525c2c26844cb940a00f206b4d1c3"                 style="width: 100.0%; height: 100.0%;">                 22km SSE of Rio Dell, California</div>                 ')[0];
+                popup_e1994dfef31f498192fb08139eb3e01f.setContent(html_e6c525c2c26844cb940a00f206b4d1c3);
+            
+
+            circle_marker_8850c3c71b414086973afd8117e7bc62.bindPopup(popup_e1994dfef31f498192fb08139eb3e01f);
+
+            
+        
+        
+            
+
+            var circle_marker_ff3f166c0409433b8d63e83e97f44e43 = L.circle(
+                [27.5876,139.97],
+                96000.0,
+                {
+                    color: '#d2291a',
+                    fillColor: '#d2291a',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_0fb6d1c306ed48e09bb4bdac693ec8ee = L.popup({maxWidth: '300'});
+
+            
+                var html_544badf42a55420f846e0289dac1f0c1 = $('         <div id="html_544badf42a55420f846e0289dac1f0c1"                 style="width: 100.0%; height: 100.0%;">                 229km WNW of Chichi-shima, Japan</div>                 ')[0];
+                popup_0fb6d1c306ed48e09bb4bdac693ec8ee.setContent(html_544badf42a55420f846e0289dac1f0c1);
+            
+
+            circle_marker_ff3f166c0409433b8d63e83e97f44e43.bindPopup(popup_0fb6d1c306ed48e09bb4bdac693ec8ee);
+
+            
+        
+        
+            
+
+            var circle_marker_1e490023438b4a99a2eb212782987846 = L.circle(
+                [36.2798,-97.3766],
+                54000.0,
+                {
+                    color: '#fca36e',
+                    fillColor: '#fca36e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_83b7c37812ce44948ffb9155d9e76714 = L.popup({maxWidth: '300'});
+
+            
+                var html_5524acd4b3014077885d8a837b7a8bb8 = $('         <div id="html_5524acd4b3014077885d8a837b7a8bb8"                 style="width: 100.0%; height: 100.0%;">                 8km W of Perry, Oklahoma</div>                 ')[0];
+                popup_83b7c37812ce44948ffb9155d9e76714.setContent(html_5524acd4b3014077885d8a837b7a8bb8);
+            
+
+            circle_marker_1e490023438b4a99a2eb212782987846.bindPopup(popup_83b7c37812ce44948ffb9155d9e76714);
+
+            
+        
+        
+            
+
+            var circle_marker_e2ba38797950474c850ff34ac84a6512 = L.circle(
+                [38.6942,-118.4759],
+                34000.0,
+                {
+                    color: '#fdce97',
+                    fillColor: '#fdce97',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_86791617743f49b08454332f0f0635e8 = L.popup({maxWidth: '300'});
+
+            
+                var html_d37c98e3dc3c40a1ad79970c89f71776 = $('         <div id="html_d37c98e3dc3c40a1ad79970c89f71776"                 style="width: 100.0%; height: 100.0%;">                 22km NE of Hawthorne, Nevada</div>                 ')[0];
+                popup_86791617743f49b08454332f0f0635e8.setContent(html_d37c98e3dc3c40a1ad79970c89f71776);
+            
+
+            circle_marker_e2ba38797950474c850ff34ac84a6512.bindPopup(popup_86791617743f49b08454332f0f0635e8);
+
+            
+        
+        
+            
+
+            var circle_marker_c933b34b6d0c485b9fb70364fb64a2f1 = L.circle(
+                [33.1906667,-116.3885],
+                17200.0,
+                {
+                    color: '#fee4c0',
+                    fillColor: '#fee4c0',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_5cbf38b0cd1f4c2db4efab7148bab044 = L.popup({maxWidth: '300'});
+
+            
+                var html_82e762934dd8489c8b33d15e3056addf = $('         <div id="html_82e762934dd8489c8b33d15e3056addf"                 style="width: 100.0%; height: 100.0%;">                 7km S of Borrego Springs, CA</div>                 ')[0];
+                popup_5cbf38b0cd1f4c2db4efab7148bab044.setContent(html_82e762934dd8489c8b33d15e3056addf);
+            
+
+            circle_marker_c933b34b6d0c485b9fb70364fb64a2f1.bindPopup(popup_5cbf38b0cd1f4c2db4efab7148bab044);
+
+            
+        
+        
+            
+
+            var circle_marker_7ee609b62e7947b286d7f48cb63a81d8 = L.circle(
+                [57.7179,-156.3169],
+                44000.0,
+                {
+                    color: '#fdbe87',
+                    fillColor: '#fdbe87',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_50cfa8901fc74901a2cc02f9b68ed3f3 = L.popup({maxWidth: '300'});
+
+            
+                var html_967a0d8f3c904137bd92329cbd6a404f = $('         <div id="html_967a0d8f3c904137bd92329cbd6a404f"                 style="width: 100.0%; height: 100.0%;">                 109km S of King Salmon, Alaska</div>                 ')[0];
+                popup_50cfa8901fc74901a2cc02f9b68ed3f3.setContent(html_967a0d8f3c904137bd92329cbd6a404f);
+            
+
+            circle_marker_7ee609b62e7947b286d7f48cb63a81d8.bindPopup(popup_50cfa8901fc74901a2cc02f9b68ed3f3);
+
+            
+        
+        
+            
+
+            var circle_marker_aebb07ac2a4c46179529c0a15986b2bb = L.circle(
+                [37.3686667,-119.97966670000001],
+                47200.0,
+                {
+                    color: '#fdb881',
+                    fillColor: '#fdb881',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_5fcd01f849e046bb9624a19b9472cfb5 = L.popup({maxWidth: '300'});
+
+            
+                var html_c90e273fb66d4435a3c988056c06bc98 = $('         <div id="html_c90e273fb66d4435a3c988056c06bc98"                 style="width: 100.0%; height: 100.0%;">                 12km S of Mariposa, California</div>                 ')[0];
+                popup_5fcd01f849e046bb9624a19b9472cfb5.setContent(html_c90e273fb66d4435a3c988056c06bc98);
+            
+
+            circle_marker_aebb07ac2a4c46179529c0a15986b2bb.bindPopup(popup_5fcd01f849e046bb9624a19b9472cfb5);
+
+            
+        
+        
+            
+
+            var circle_marker_63a99fe665644ccda3470587c5dfd4a1 = L.circle(
+                [53.2944,-166.2736],
+                78000.0,
+                {
+                    color: '#ef6447',
+                    fillColor: '#ef6447',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_ef2f970debd34e2a946c682816fd114d = L.popup({maxWidth: '300'});
+
+            
+                var html_ce1a6b42d9c64696897540d034a7aaf7 = $('         <div id="html_ce1a6b42d9c64696897540d034a7aaf7"                 style="width: 100.0%; height: 100.0%;">                 66km SSE of Unalaska, Alaska</div>                 ')[0];
+                popup_ef2f970debd34e2a946c682816fd114d.setContent(html_ce1a6b42d9c64696897540d034a7aaf7);
+            
+
+            circle_marker_63a99fe665644ccda3470587c5dfd4a1.bindPopup(popup_ef2f970debd34e2a946c682816fd114d);
+
+            
+        
+        
+            
+
+            var circle_marker_ee3b485f4d514837a1b257cd044c46de = L.circle(
+                [-10.1328,161.0275],
+                126000.0,
+                {
+                    color: '#7f0000',
+                    fillColor: '#7f0000',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_35ea453b09414707a050c3fedcf196c1 = L.popup({maxWidth: '300'});
+
+            
+                var html_f9b20f547c9f43aa96570193f21dac64 = $('         <div id="html_f9b20f547c9f43aa96570193f21dac64"                 style="width: 100.0%; height: 100.0%;">                 104km WNW of Kirakira, Solomon Islands</div>                 ')[0];
+                popup_35ea453b09414707a050c3fedcf196c1.setContent(html_f9b20f547c9f43aa96570193f21dac64);
+            
+
+            circle_marker_ee3b485f4d514837a1b257cd044c46de.bindPopup(popup_35ea453b09414707a050c3fedcf196c1);
+
+            
+        
+        
+            
+
+            var circle_marker_2c08b7f97a3c4fecadaec11a1c8dc823 = L.circle(
+                [38.4335,-118.8811],
+                26000.0,
+                {
+                    color: '#fdd9a8',
+                    fillColor: '#fdd9a8',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_628b887471fc4b39abe5e8052547dd41 = L.popup({maxWidth: '300'});
+
+            
+                var html_dcf082a4b75d4aec82d35a44fb4573e1 = $('         <div id="html_dcf082a4b75d4aec82d35a44fb4573e1"                 style="width: 100.0%; height: 100.0%;">                 24km WSW of Hawthorne, Nevada</div>                 ')[0];
+                popup_628b887471fc4b39abe5e8052547dd41.setContent(html_dcf082a4b75d4aec82d35a44fb4573e1);
+            
+
+            circle_marker_2c08b7f97a3c4fecadaec11a1c8dc823.bindPopup(popup_628b887471fc4b39abe5e8052547dd41);
+
+            
+        
+        
+            
+
+            var circle_marker_6e971e5fd57a42488d6fa42050012e72 = L.circle(
+                [-31.335,-70.939],
+                100000.0,
+                {
+                    color: '#c91d13',
+                    fillColor: '#c91d13',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_1174b2800530417da91cb76bbfe58c02 = L.popup({maxWidth: '300'});
+
+            
+                var html_a9f952cbcc644477a867d2465224170a = $('         <div id="html_a9f952cbcc644477a867d2465224170a"                 style="width: 100.0%; height: 100.0%;">                 39km NNE of Illapel, Chile</div>                 ')[0];
+                popup_1174b2800530417da91cb76bbfe58c02.setContent(html_a9f952cbcc644477a867d2465224170a);
+            
+
+            circle_marker_6e971e5fd57a42488d6fa42050012e72.bindPopup(popup_1174b2800530417da91cb76bbfe58c02);
+
+            
+        
+        
+            
+
+            var circle_marker_3b3875aaee2747f6b90d0afd041a2bd8 = L.circle(
+                [61.4302,-149.4381],
+                24000.0,
+                {
+                    color: '#fddbad',
+                    fillColor: '#fddbad',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_611f007d5c5f48e982182549b02b8eff = L.popup({maxWidth: '300'});
+
+            
+                var html_cd09e74538a543b78cc7ba840355a479 = $('         <div id="html_cd09e74538a543b78cc7ba840355a479"                 style="width: 100.0%; height: 100.0%;">                 12km SE of Knik-Fairview, Alaska</div>                 ')[0];
+                popup_611f007d5c5f48e982182549b02b8eff.setContent(html_cd09e74538a543b78cc7ba840355a479);
+            
+
+            circle_marker_3b3875aaee2747f6b90d0afd041a2bd8.bindPopup(popup_611f007d5c5f48e982182549b02b8eff);
+
+            
+        
+        
+            
+
+            var circle_marker_e7c1812766254be78b9f890b141e0a3d = L.circle(
+                [19.3878333,-155.2715],
+                3200.0,
+                {
+                    color: '#fff2e1',
+                    fillColor: '#fff2e1',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_0c177ba096f6431e8b766fee078e562b = L.popup({maxWidth: '300'});
+
+            
+                var html_d07df306b7bd4284a8772cff17540d30 = $('         <div id="html_d07df306b7bd4284a8772cff17540d30"                 style="width: 100.0%; height: 100.0%;">                 5km SW of Volcano, Hawaii</div>                 ')[0];
+                popup_0c177ba096f6431e8b766fee078e562b.setContent(html_d07df306b7bd4284a8772cff17540d30);
+            
+
+            circle_marker_e7c1812766254be78b9f890b141e0a3d.bindPopup(popup_0c177ba096f6431e8b766fee078e562b);
+
+            
+        
+        
+            
+
+            var circle_marker_1883f3e5622c4d49aa18e0b51e5cee85 = L.circle(
+                [18.8521,-64.6863],
+                46000.0,
+                {
+                    color: '#fdba83',
+                    fillColor: '#fdba83',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_3791f973c1744803892e0be1e0c0f9f7 = L.popup({maxWidth: '300'});
+
+            
+                var html_ec338e9cfecd455c8e3f5bbca5b8a00f = $('         <div id="html_ec338e9cfecd455c8e3f5bbca5b8a00f"                 style="width: 100.0%; height: 100.0%;">                 48km N of Road Town, British Virgin Islands</div>                 ')[0];
+                popup_3791f973c1744803892e0be1e0c0f9f7.setContent(html_ec338e9cfecd455c8e3f5bbca5b8a00f);
+            
+
+            circle_marker_1883f3e5622c4d49aa18e0b51e5cee85.bindPopup(popup_3791f973c1744803892e0be1e0c0f9f7);
+
+            
+        
+        
+            
+
+            var circle_marker_019d67dad4164977a7eb78ee93bb311b = L.circle(
+                [36.9227,-116.1426],
+                -2000.0,
+                {
+                    color: '#fff7ec',
+                    fillColor: '#fff7ec',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_2447c75aef8e420bb6707bd98430696e = L.popup({maxWidth: '300'});
+
+            
+                var html_4768024385ba4faa9a1533d869c5de23 = $('         <div id="html_4768024385ba4faa9a1533d869c5de23"                 style="width: 100.0%; height: 100.0%;">                 54km E of Beatty, Nevada</div>                 ')[0];
+                popup_2447c75aef8e420bb6707bd98430696e.setContent(html_4768024385ba4faa9a1533d869c5de23);
+            
+
+            circle_marker_019d67dad4164977a7eb78ee93bb311b.bindPopup(popup_2447c75aef8e420bb6707bd98430696e);
+
+            
+        
+        
+            
+
+            var circle_marker_50d45524b58e455ebfa55524ae2c1bb8 = L.circle(
+                [18.892,-64.1715],
+                60000.0,
+                {
+                    color: '#fc925e',
+                    fillColor: '#fc925e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_cf61a0abbba74e6b9607209d073ca4b0 = L.popup({maxWidth: '300'});
+
+            
+                var html_b771715ae01e480ca9dcc5acd2563930 = $('         <div id="html_b771715ae01e480ca9dcc5acd2563930"                 style="width: 100.0%; height: 100.0%;">                 66km NE of Road Town, British Virgin Islands</div>                 ')[0];
+                popup_cf61a0abbba74e6b9607209d073ca4b0.setContent(html_b771715ae01e480ca9dcc5acd2563930);
+            
+
+            circle_marker_50d45524b58e455ebfa55524ae2c1bb8.bindPopup(popup_cf61a0abbba74e6b9607209d073ca4b0);
+
+            
+        
+        
+            
+
+            var circle_marker_5bbf7f5be7fc48a384b8e1cc0d5a5a31 = L.circle(
+                [50.3429,-173.5777],
+                90000.0,
+                {
+                    color: '#dc3c28',
+                    fillColor: '#dc3c28',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_4af99195d8b64d80ac3599ffd7e94915 = L.popup({maxWidth: '300'});
+
+            
+                var html_706497952a2a4904a93b4c2e199b8076 = $('         <div id="html_706497952a2a4904a93b4c2e199b8076"                 style="width: 100.0%; height: 100.0%;">                 210km SSE of Atka, Alaska</div>                 ')[0];
+                popup_4af99195d8b64d80ac3599ffd7e94915.setContent(html_706497952a2a4904a93b4c2e199b8076);
+            
+
+            circle_marker_5bbf7f5be7fc48a384b8e1cc0d5a5a31.bindPopup(popup_4af99195d8b64d80ac3599ffd7e94915);
+
+            
+        
+        
+            
+
+            var circle_marker_0b5e94c73841487ea97efa4718d1f39e = L.circle(
+                [64.8596,-150.977],
+                60000.0,
+                {
+                    color: '#fc925e',
+                    fillColor: '#fc925e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_70c7115ad28047f4999cdb3e4bd7fa62 = L.popup({maxWidth: '300'});
+
+            
+                var html_18ab5638e9b943da9aafc0452daec2f5 = $('         <div id="html_18ab5638e9b943da9aafc0452daec2f5"                 style="width: 100.0%; height: 100.0%;">                 22km SW of Manley Hot Springs, Alaska</div>                 ')[0];
+                popup_70c7115ad28047f4999cdb3e4bd7fa62.setContent(html_18ab5638e9b943da9aafc0452daec2f5);
+            
+
+            circle_marker_0b5e94c73841487ea97efa4718d1f39e.bindPopup(popup_70c7115ad28047f4999cdb3e4bd7fa62);
+
+            
+        
+        
+            
+
+            var circle_marker_e52707f65ec3430d8f3aa0af1ea7d2c3 = L.circle(
+                [63.4054,-151.3408],
+                24000.0,
+                {
+                    color: '#fddbad',
+                    fillColor: '#fddbad',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_40cc0c841db54236bde9f1d5366fb560 = L.popup({maxWidth: '300'});
+
+            
+                var html_4df65c21cdbd4b09a2caa0446f63c71a = $('         <div id="html_4df65c21cdbd4b09a2caa0446f63c71a"                 style="width: 100.0%; height: 100.0%;">                 119km W of Cantwell, Alaska</div>                 ')[0];
+                popup_40cc0c841db54236bde9f1d5366fb560.setContent(html_4df65c21cdbd4b09a2caa0446f63c71a);
+            
+
+            circle_marker_e52707f65ec3430d8f3aa0af1ea7d2c3.bindPopup(popup_40cc0c841db54236bde9f1d5366fb560);
+
+            
+        
+        
+            
+
+            var circle_marker_108d7be89d294c2baa0a07267f81d9b6 = L.circle(
+                [37.022,-117.8265],
+                36000.0,
+                {
+                    color: '#fdca94',
+                    fillColor: '#fdca94',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_ef004b7ce84f4792af710f86625a4f13 = L.popup({maxWidth: '300'});
+
+            
+                var html_d75f49d78a074b9fa61521ca3f6f6d48 = $('         <div id="html_d75f49d78a074b9fa61521ca3f6f6d48"                 style="width: 100.0%; height: 100.0%;">                 44km ESE of Big Pine, California</div>                 ')[0];
+                popup_ef004b7ce84f4792af710f86625a4f13.setContent(html_d75f49d78a074b9fa61521ca3f6f6d48);
+            
+
+            circle_marker_108d7be89d294c2baa0a07267f81d9b6.bindPopup(popup_ef004b7ce84f4792af710f86625a4f13);
+
+            
+        
+        
+            
+
+            var circle_marker_f8d7860a49554a55bea5e5670193c658 = L.circle(
+                [33.266,-116.80566670000002],
+                20000.0,
+                {
+                    color: '#fee0b8',
+                    fillColor: '#fee0b8',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_884487e377c24bb3a953fe13612d30d6 = L.popup({maxWidth: '300'});
+
+            
+                var html_95de2887a2094b60a9787e32487482fe = $('         <div id="html_95de2887a2094b60a9787e32487482fe"                 style="width: 100.0%; height: 100.0%;">                 5km NW of Lake Henshaw, CA</div>                 ')[0];
+                popup_884487e377c24bb3a953fe13612d30d6.setContent(html_95de2887a2094b60a9787e32487482fe);
+            
+
+            circle_marker_f8d7860a49554a55bea5e5670193c658.bindPopup(popup_884487e377c24bb3a953fe13612d30d6);
+
+            
+        
+        
+            
+
+            var circle_marker_df0d16bfa65d45d299acb63bb4274d1c = L.circle(
+                [38.7929993,-122.7539978],
+                15400.0,
+                {
+                    color: '#fee7c5',
+                    fillColor: '#fee7c5',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_218251a2c8dd4e0692148752b33a8376 = L.popup({maxWidth: '300'});
+
+            
+                var html_a6678c9a63c64c449c22d8a10e589064 = $('         <div id="html_a6678c9a63c64c449c22d8a10e589064"                 style="width: 100.0%; height: 100.0%;">                 1km N of The Geysers, California</div>                 ')[0];
+                popup_218251a2c8dd4e0692148752b33a8376.setContent(html_a6678c9a63c64c449c22d8a10e589064);
+            
+
+            circle_marker_df0d16bfa65d45d299acb63bb4274d1c.bindPopup(popup_218251a2c8dd4e0692148752b33a8376);
+
+            
+        
+        
+            
+
+            var circle_marker_92aa5a06befc4077aa29d7907d52e741 = L.circle(
+                [61.1265,-147.186],
+                32000.0,
+                {
+                    color: '#fdd19b',
+                    fillColor: '#fdd19b',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_da9e192465e641d1b5b6a4929c2c6dbb = L.popup({maxWidth: '300'});
+
+            
+                var html_150e1f46b327424787ce402435a460cd = $('         <div id="html_150e1f46b327424787ce402435a460cd"                 style="width: 100.0%; height: 100.0%;">                 45km W of Valdez, Alaska</div>                 ')[0];
+                popup_da9e192465e641d1b5b6a4929c2c6dbb.setContent(html_150e1f46b327424787ce402435a460cd);
+            
+
+            circle_marker_92aa5a06befc4077aa29d7907d52e741.bindPopup(popup_da9e192465e641d1b5b6a4929c2c6dbb);
+
+            
+        
+        
+            
+
+            var circle_marker_5f09d9e25574433a92787896a98ec163 = L.circle(
+                [57.0745,-157.7355],
+                52000.0,
+                {
+                    color: '#fda973',
+                    fillColor: '#fda973',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_467f352e02324ccc8b8dfb6992e75d56 = L.popup({maxWidth: '300'});
+
+            
+                var html_c5896df1cd394fcb8b44eab4e816fbb3 = $('         <div id="html_c5896df1cd394fcb8b44eab4e816fbb3"                 style="width: 100.0%; height: 100.0%;">                 110km NE of Chignik Lake, Alaska</div>                 ')[0];
+                popup_467f352e02324ccc8b8dfb6992e75d56.setContent(html_c5896df1cd394fcb8b44eab4e816fbb3);
+            
+
+            circle_marker_5f09d9e25574433a92787896a98ec163.bindPopup(popup_467f352e02324ccc8b8dfb6992e75d56);
+
+            
+        
+        
+            
+
+            var circle_marker_a82a6be43d9844bb9497dd070008164d = L.circle(
+                [38.3933,-118.9092],
+                30000.0,
+                {
+                    color: '#fdd49e',
+                    fillColor: '#fdd49e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_0ae60a1784b640bda3a9d56e62434773 = L.popup({maxWidth: '300'});
+
+            
+                var html_f191c28d2e3a4365801217dfdd54893b = $('         <div id="html_f191c28d2e3a4365801217dfdd54893b"                 style="width: 100.0%; height: 100.0%;">                 28km WSW of Hawthorne, Nevada</div>                 ')[0];
+                popup_0ae60a1784b640bda3a9d56e62434773.setContent(html_f191c28d2e3a4365801217dfdd54893b);
+            
+
+            circle_marker_a82a6be43d9844bb9497dd070008164d.bindPopup(popup_0ae60a1784b640bda3a9d56e62434773);
+
+            
+        
+        
+            
+
+            var circle_marker_8ec05c587a144bacbf6f831f482b17bd = L.circle(
+                [34.2685,-116.44483329999998],
+                19800.0,
+                {
+                    color: '#fee1b9',
+                    fillColor: '#fee1b9',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_c7849de2466a4f09b6af7ec69136b0f7 = L.popup({maxWidth: '300'});
+
+            
+                var html_e5128aa20ac248448c6b8eee3cd676bd = $('         <div id="html_e5128aa20ac248448c6b8eee3cd676bd"                 style="width: 100.0%; height: 100.0%;">                 17km N of Yucca Valley, CA</div>                 ')[0];
+                popup_c7849de2466a4f09b6af7ec69136b0f7.setContent(html_e5128aa20ac248448c6b8eee3cd676bd);
+            
+
+            circle_marker_8ec05c587a144bacbf6f831f482b17bd.bindPopup(popup_c7849de2466a4f09b6af7ec69136b0f7);
+
+            
+        
+        
+            
+
+            var circle_marker_cfad614813a947508990c52088e5ef89 = L.circle(
+                [45.408666700000005,-112.22283329999999],
+                1600.0,
+                {
+                    color: '#fff4e4',
+                    fillColor: '#fff4e4',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_d188ca60605544a196c4d92161db42ab = L.popup({maxWidth: '300'});
+
+            
+                var html_8c06743026d747978158685328604825 = $('         <div id="html_8c06743026d747978158685328604825"                 style="width: 100.0%; height: 100.0%;">                 25km WNW of Virginia City, Montana</div>                 ')[0];
+                popup_d188ca60605544a196c4d92161db42ab.setContent(html_8c06743026d747978158685328604825);
+            
+
+            circle_marker_cfad614813a947508990c52088e5ef89.bindPopup(popup_d188ca60605544a196c4d92161db42ab);
+
+            
+        
+        
+            
+
+            var circle_marker_55e262c47b744677a2a1e4cc17dcf61d = L.circle(
+                [63.1039,-151.5314],
+                44000.0,
+                {
+                    color: '#fdbe87',
+                    fillColor: '#fdbe87',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_448ddd5921cd4fe68b285f4cbf175c4e = L.popup({maxWidth: '300'});
+
+            
+                var html_50d72a9585014eb78ddb0a97529451dd = $('         <div id="html_50d72a9585014eb78ddb0a97529451dd"                 style="width: 100.0%; height: 100.0%;">                 113km NW of Talkeetna, Alaska</div>                 ')[0];
+                popup_448ddd5921cd4fe68b285f4cbf175c4e.setContent(html_50d72a9585014eb78ddb0a97529451dd);
+            
+
+            circle_marker_55e262c47b744677a2a1e4cc17dcf61d.bindPopup(popup_448ddd5921cd4fe68b285f4cbf175c4e);
+
+            
+        
+        
+            
+
+            var circle_marker_74bf3b45c78c4260a84da36e634c01f6 = L.circle(
+                [33.2411667,-116.6728333],
+                24200.0,
+                {
+                    color: '#fddbad',
+                    fillColor: '#fddbad',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_e5e1a01822a146938d413e3500e29787 = L.popup({maxWidth: '300'});
+
+            
+                var html_7b016bd513274854aecef925e8359079 = $('         <div id="html_7b016bd513274854aecef925e8359079"                 style="width: 100.0%; height: 100.0%;">                 6km SW of Warner Springs, CA</div>                 ')[0];
+                popup_e5e1a01822a146938d413e3500e29787.setContent(html_7b016bd513274854aecef925e8359079);
+            
+
+            circle_marker_74bf3b45c78c4260a84da36e634c01f6.bindPopup(popup_e5e1a01822a146938d413e3500e29787);
+
+            
+        
+        
+            
+
+            var circle_marker_ba20cd030796418385e5d2dce39120a6 = L.circle(
+                [34.083833299999995,-117.2905],
+                21000.0,
+                {
+                    color: '#fedfb5',
+                    fillColor: '#fedfb5',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_652da9affe1243b9b51be09921a4b5ea = L.popup({maxWidth: '300'});
+
+            
+                var html_146a554e1ca94b47875d22c8e0c3207e = $('         <div id="html_146a554e1ca94b47875d22c8e0c3207e"                 style="width: 100.0%; height: 100.0%;">                 2km ENE of Colton, CA</div>                 ')[0];
+                popup_652da9affe1243b9b51be09921a4b5ea.setContent(html_146a554e1ca94b47875d22c8e0c3207e);
+            
+
+            circle_marker_ba20cd030796418385e5d2dce39120a6.bindPopup(popup_652da9affe1243b9b51be09921a4b5ea);
+
+            
+        
+        
+            
+
+            var circle_marker_a727d56fc9c74968aa971fd74ca9998e = L.circle(
+                [34.08,-117.29366670000002],
+                19000.0,
+                {
+                    color: '#fee2bb',
+                    fillColor: '#fee2bb',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_adeb6e791712405f9903cda194d16553 = L.popup({maxWidth: '300'});
+
+            
+                var html_d92e7c89357f4f9892b6757c4e303397 = $('         <div id="html_d92e7c89357f4f9892b6757c4e303397"                 style="width: 100.0%; height: 100.0%;">                 2km ENE of Colton, CA</div>                 ')[0];
+                popup_adeb6e791712405f9903cda194d16553.setContent(html_d92e7c89357f4f9892b6757c4e303397);
+            
+
+            circle_marker_a727d56fc9c74968aa971fd74ca9998e.bindPopup(popup_adeb6e791712405f9903cda194d16553);
+
+            
+        
+        
+            
+
+            var circle_marker_697755ffb9334fdd9f0c47852fc3e0f2 = L.circle(
+                [38.4227,-118.9091],
+                30000.0,
+                {
+                    color: '#fdd49e',
+                    fillColor: '#fdd49e',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_663d25b72aef49ff8f286bdddbc85b6a = L.popup({maxWidth: '300'});
+
+            
+                var html_26a117c09c944389bc196c0357620015 = $('         <div id="html_26a117c09c944389bc196c0357620015"                 style="width: 100.0%; height: 100.0%;">                 27km WSW of Hawthorne, Nevada</div>                 ')[0];
+                popup_663d25b72aef49ff8f286bdddbc85b6a.setContent(html_26a117c09c944389bc196c0357620015);
+            
+
+            circle_marker_697755ffb9334fdd9f0c47852fc3e0f2.bindPopup(popup_663d25b72aef49ff8f286bdddbc85b6a);
+
+            
+        
+        
+            
+
+            var circle_marker_88452b2070754e71a11e4c63b6adcc04 = L.circle(
+                [38.2946,21.7512],
+                90000.0,
+                {
+                    color: '#dc3c28',
+                    fillColor: '#dc3c28',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_c5da7d7d19c948bca9dc703c7506b7a2);
+            
+        
+            
+            var popup_1e7fc1720e5e4dba82077d2c584d1f36 = L.popup({maxWidth: '300'});
+
+            
+                var html_049d7ac60ff0410d94814d27d38bc4fa = $('         <div id="html_049d7ac60ff0410d94814d27d38bc4fa"                 style="width: 100.0%; height: 100.0%;">                 2km WSW of Rion, Greece</div>                 ')[0];
+                popup_1e7fc1720e5e4dba82077d2c584d1f36.setContent(html_049d7ac60ff0410d94814d27d38bc4fa);
+            
+
+            circle_marker_88452b2070754e71a11e4c63b6adcc04.bindPopup(popup_1e7fc1720e5e4dba82077d2c584d1f36);
+
+            
+        
+        
+        
+        </script>
+        
