@@ -27,7 +27,7 @@ plt.rcParams['figure.figsize'] = (12, 8)
 get_ipython().magic("config InlineBackend.figure_format='retina'")
 
 
-# In[14]:
+# In[4]:
 
 # Find the notebook the saved figures came from
 fig_prefix = "../figures/2017-01-14-tc-"
@@ -35,15 +35,13 @@ fig_prefix = "../figures/2017-01-14-tc-"
 
 # ## Load Data
 
-# In[36]:
+# In[7]:
 
-get_ipython().system('head -n2 ../data/P00000001-ALL.csv')
-
-
-# In[40]:
+datfile = '../../zzData_RAW/P00000001-ALL.csv'
 
 cols = ['cand_nm', 'contbr_st', 'contbr_employer',         'contb_receipt_amt', 'contbr_occupation', 'contb_receipt_amt', 'contb_receipt_dt']
-donate = pd.read_csv('../data/P00000001-ALL.csv', index_col=False, dtype='object', usecols = cols)
+
+donate = pd.read_csv(datfile, index_col=False, dtype='object', usecols = cols)
 donate['contb_receipt_amt'] = pd.to_numeric(donate['contb_receipt_amt'])
 # donate['contb_receipt_dt'] = pd.to_datetime(donate['contb_receipt_dt'])
 
@@ -52,23 +50,23 @@ donate.dtypes
 
 # ## Review Data
 
-# In[43]:
+# In[8]:
 
 import qgrid # Best practices is to put imports at the top of the Notebook.
 qgrid.nbinstall(overwrite=True)
 
 
-# In[46]:
+# In[9]:
 
 donate.head()
 
 
-# In[45]:
+# In[10]:
 
 qgrid.show_grid(donate.head(), remote_js=True)
 
 
-# In[58]:
+# In[11]:
 
 donate.groupby('cand_nm').mean()
 
